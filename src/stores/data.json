@@ -118,7 +118,7 @@
   "dInsured": {
     "qId": "dInsured",
     "title":
-      "Is the defendant (ie the other road user) insured? In road defect cases this is the council who is insured.",
+      "Is the defendant (i.e. the other road user) insured? In road defect cases this is the council so you can assume they're insured.",
     "answered": "",
     "answeredOn": "",
     "type": "button",
@@ -1622,7 +1622,6 @@
     "type": "text",
     "placeholder": "Kings College Hospital, London"
   },
-
   "lossesFinancial": {
     "qId": "lossesFinancial",
     "title": "Did you suffer any financial losses?",

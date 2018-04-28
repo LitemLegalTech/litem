@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Lightbox from 'react-image-lightbox';
 import sampleLetter from './../../assets/sample-letter.png';
 import sampleLetterThumb from './../../assets/sample-letter-thumb.png';
-import ImgLetterThumb from './../styled-components/img-letter-thumb';
+import ImgLetterThumb from './../../components/styled-components/img-letter-thumb';
 export default class LightboxExample extends Component {
   state = {
     isOpen: false

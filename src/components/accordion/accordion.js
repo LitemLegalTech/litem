@@ -6,7 +6,7 @@ import {
   AccordionMenu,
   AccordionItem /*,
   Chevron*/
-} from './../styled-components/accordion';
+} from './../../components/styled-components/accordion';
 //import ChevronIcon from './../../assets/IMAGES/chevron_icon.svg';
 
 class Accordion extends Component {

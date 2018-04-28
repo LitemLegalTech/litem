@@ -4,7 +4,7 @@ import { Provider } from 'mobx-react';
 import registerServiceWorker from './registerServiceWorker';
 
 import RootStore from './stores/root-store';
-import Routes from './components/routes/routes';
+import Routes from './routes/routes';
 
 import 'normalize.css';
 import { ThemeProvider } from 'styled-components';

@@ -185,6 +185,9 @@ class NavBar extends Component {
           <Link to="/contact" id="menu contact" onClick={e => clicked(e.target.id)}>
             Get in Touch
           </Link>
+          <Link style={{ color: '#42506b' }} to="/valuerTEST">
+            valuerTEST
+          </Link>
           <Link
             style={{ color: '#42506b' }}
             to="/"
