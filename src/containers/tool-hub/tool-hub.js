@@ -41,7 +41,7 @@ class ToolHub extends Component {
           However, this advice is not a substitute for a lawyer and we accept no liability for the outcome of your case.
         </P>
         <P>
-          <br />Please tick once you've read this
+          Please tick once you've read this
           <Checkbox
             onClick={() => {
               this.setState({ show: !this.state.show });
@@ -51,8 +51,18 @@ class ToolHub extends Component {
         </P>
         <div className={this.state.show ? 'show' : 'hide'}>
           <P>
-            It might help to have a look through our guides first. This includes a practical example of how someone
-            would settle their case using Litem. If you are ready to get started please select one of our tools:
+            It might help to have a look through{' '}
+            <Link
+              name="guides"
+              onClick={() => {
+                this.props.history.push('guides');
+                this.props.setSection('guides');
+              }}
+            >
+              our guides
+            </Link>{' '}
+            first. This includes a practical example of how someone would settle their case using Litem. If you are
+            ready to get started please select one of our tools:
           </P>
           {/*<Header>Please select one of the following:</Header>*/}
           <BtnGroup>
@@ -67,18 +77,18 @@ class ToolHub extends Component {
             >
               What is my case worth?
             </Btn>
-            <Btn b="20px" onClick={e => handleNavClick(e, this.props.history)} id="tool-hub guides" name="guides">
+            {/*<Btn b="20px" onClick={e => handleNavClick(e, this.props.history)} id="tool-hub guides" name="guides">
               Or have a look through our guides?
-            </Btn>
+            </Btn>*/}
           </BtnGroup>
-          <P>
+          {/*<P>
             If you decide that you would prefer to use a lawyer, feel free to contact us{' '}
             <Link onClick={e => handleNavClick(e, this.props.history)} id="tool-hub contact" name="contact">
               here
             </Link>{' '}
             or email us at info@litem.co.uk and we will send you some suggestions. We are not paid to recommend these
             law firms and we will never pass your details on to anyone.
-          </P>
+          </P>*/}
         </div>
       </Container>
     );

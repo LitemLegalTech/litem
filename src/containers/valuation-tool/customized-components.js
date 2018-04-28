@@ -12,7 +12,7 @@ export const CustomDropdown = styled(Dropdown)`
 
 export const CustomDropdownButton = styled(Button)`
   max-width: 98vw;
-  min-width: 400px;
+  min-width: 300px;
   border-radius: 50px;
   background-color: ${props => props.theme.colors.color2};
   padding-left: 25px;
@@ -61,12 +61,6 @@ export const CustomButton = styled(Button)`
   }
 `;
 
-/*position: fixed;
-left: 10px;
-bottom: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: bottom;*/
 export const CustomBottomButton = styled(Button)`
   margin-left: 10px;
   margin-right: 10px;

@@ -6,6 +6,7 @@ import BtnGetStarted from './../../components/styled-components/btn-get-started'
 import P from './../../components/styled-components/p';
 import Title from './../../components/styled-components/title';
 import Container from './../../components/styled-components/container';
+import Link from './../../components/styled-components/link';
 
 @inject('RootStore')
 @observer
@@ -30,7 +31,16 @@ class PreTool extends React.Component {
         </P>
         <P b="50px">
           It is important that you are honest when you come to value your case. There can be severe penalties for
-          dishonesty. See this guide for more details.
+          dishonesty. See{' '}
+          <Link
+            name="guides"
+            onClick={() => {
+              this.props.history.push('guides');
+              this.props.setSection('guides');
+            }}
+          >
+            our guide
+          </Link>, 'the importance of being honest' for more details.
         </P>
         <BtnGetStarted onClick={e => handleNavClick(e, this.props.history)} id="get started pre-valuer" name="valuer">
           Start
