@@ -16,11 +16,8 @@ class PreTool extends React.Component {
         <Title t="50px" center>
           Write to the defendant
         </Title>
-        <P>
-          We're going to ask you a few questions to find out more about the circumstances of the incident to give you a
-          few pointers about the case. Then we'll ask for details for the defendant and where the incident occurred to
-          generate a letter to notify the defendants. It will look a little like this:
-        </P>
+        <P>We're going to ask you around 5 more questions to generate a letter to notify the defendants.</P>
+        <P>It will look a little like this:</P>
         <Lightbox />
         <br />
         <P b="90px">

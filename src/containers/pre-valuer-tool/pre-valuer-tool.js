@@ -18,9 +18,7 @@ class PreTool extends React.Component {
   render() {
     return (
       <Container>
-        <Title t="50px" b="10px">
-          What is my case worth?
-        </Title>
+        <Title t="40px">What is my case worth?</Title>
         <P>
           This is designed to give you our best assessment of the value of your case from the information you give us.
           If you would like a more accurate valuation please speak with a solicitor.

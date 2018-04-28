@@ -13,13 +13,13 @@ class PreTool extends React.Component {
   render() {
     return (
       <Container>
-        <Title center t="50px">
+        <Title center t="40px">
           Do I have a good case?
         </Title>
+        <P justify>We're going to ask you around 10 easy questions to find out whether you've got a good case.</P>
         <P justify b="50px">
-          We're going to ask you around 10 easy questions to find out whether you've got a good case.
+          Don't worry - you don't need to sign-up to get our advice and we don't take any personal details.
         </P>
-        <P>Don't worry - you don't need to sign-up to get our advice and we don't take any personal details.</P>
         <BtnGetStarted onClick={e => handleNavClick(e, this.props.history)} id="get started pre-case" name="case-tool">
           Start
         </BtnGetStarted>

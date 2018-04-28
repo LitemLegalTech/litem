@@ -323,7 +323,7 @@ class Section1 extends Component {
             <Title dark>Valuation Tool</Title>
             <Header dark>Building the best personal injury valuation tool on the internet takes time!</Header>
             <Header dark>
-              Check back with us in {moment('20180507', 'YYYYMMDD').fromNow()} to get your valuation!
+              Check back with us in {moment('20180514', 'YYYYMMDD').fromNow()} to get your valuation!
             </Header>
           </Container>
         ) : (

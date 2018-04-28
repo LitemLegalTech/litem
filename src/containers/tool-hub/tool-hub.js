@@ -30,7 +30,7 @@ class ToolHub extends Component {
 
   render() {
     return (
-      <Container t="50px">
+      <Container t="40px">
         <Title center>Welcome to Litem.</Title>
         <Header center>Before we get going...</Header>
         <P>
