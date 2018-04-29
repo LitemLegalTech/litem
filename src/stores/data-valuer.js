@@ -1,13 +1,14 @@
 const data = {
   injuryType: {
     id: 'injuryType',
-    title: 'What type of injury did you have? You can add more injuries later.',
+    title: 'What type of injury did you have? You can add more later.',
     body: [],
+    placeholder: 'Choose the type of injury',
     type: 'Dropdown',
     answers: [
       {
         id: 'tSoft',
-        label: 'Soft tissue / ligaments / bruising',
+        label: 'Soft tissue / ligament / bruising',
         nxtQ: 'lSoft'
       },
       {

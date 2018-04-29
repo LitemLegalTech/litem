@@ -7,3 +7,5 @@ const theme = {
   }
 };
 export default theme;
+
+//#fccf4d = rgba(252,207,77, 1)

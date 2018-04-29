@@ -12,7 +12,7 @@ const PrivacyPolicy = props => {
       <Header>Owner and Data Controller</Header>
       <P>
         Alex Jeffcott<br />Litem Ltd<br />30 Gerald's Way<br />Bussage<br />Stroud<br />Glos<br />GL6 8FJ<br />UK<br />Owner
-        contact email: info@litem.com
+        contact email: info@litem.co.uk
       </P>
 
       <Header>Types of Data collected</Header>
@@ -46,7 +46,9 @@ const PrivacyPolicy = props => {
       </P>
 
       <Header>Mode and place of processing the Data</Header>
-      <P>Methods of processing</P>
+      <P>
+        <ins>Methods of processing</ins>
+      </P>
       <P>
         The Data Controller processes the Data of Users in a proper manner and shall take appropriate security measures
         to prevent unauthorised access, disclosure, modification, or unauthorised destruction of the Data.
@@ -79,30 +81,47 @@ const PrivacyPolicy = props => {
         infrastructure and Interaction with online survey platforms.
       </P>
       <P>The Personal Data used for each purpose is outlined in the specific sections of this document.</P>
-      <P>Detailed information on the processing of Personal Data</P>
+      <P>
+        <ins>Detailed information on the processing of Personal Data</ins>
+      </P>
       <P>Personal Data is collected for the following purposes and using the following services:</P>
-      <P>Mailing list or newsletter (this Website)</P>
+      <P>
+        <strong>Mailing list or newsletter (this Website)</strong>
+      </P>
       <P>
         By sending us an email or message, the User&rsquo;s email address and first and last name will be held on our
         email server, along with any information given in the email or message.
       </P>
-      <P>Personal Data collected: date of birth, email address, first name and last name.</P>
-      <P>Interaction with online survey platforms</P>
+      <P>Personal Data collected: email address, first name and last name.</P>
       <P>
-        his type of service allows Users to interact with third party online survey platforms directly from the pages of
-        this Website.
+        <strong>Interaction with online survey platforms</strong>
+      </P>
+      <P>
+        This type of service allows Users to interact with third party online survey platforms directly from the pages
+        of this Website.
       </P>
       <P>
         If one of these services is installed, it may collect browsing and Usage Data in the pages where it is
         installed, even if the Users do not actively use the service.
       </P>
-      <P>SurveyMonkey Widget (SurveyMonkey Inc.)</P>
+      <P>
+        <strong>SurveyMonkey Widget (SurveyMonkey Inc.)</strong>
+      </P>
       <P>
         The SurveyMonkey Widget is a service for interacting with the SurveyMonkey online survey platform provided by
         SurveyMonkey Inc.
       </P>
       <P>Personal Data collected: Cookies and Usage Data.</P>
-      <P>Place of processing: US &ndash; Privacy Policy</P>
+      <P>
+        Place of processing: US &ndash;
+        <a
+          href="https://www.surveymonkey.com/mp/legal/privacy-policy/?ut_source=footer"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Privacy Policy
+        </a>
+      </P>
       <Header>Analytics</Header>
       <P>
         The services contained in this section enable the Owner to monitor and analyze web traffic and can be used to
@@ -116,25 +135,53 @@ const PrivacyPolicy = props => {
       </P>
       <P>Google may use the Data collected to contextualize and personalize the ads of its own advertising network.</P>
       <P>Personal Data collected: Cookies and Usage Data.</P>
-      <P>Place of processing: US &ndash; Privacy Policy &ndash; Opt Out</P>
       <P>
-        Hosting and backend infrastructure<br />This type of service has the purpose of hosting data and files that
-        enable this Application to run and be distributed as well as to provide a ready-made infrastructure to run
-        specific features or parts of this Application. Some of these services work through geographically distributed
-        servers, making it difficult to determine the actual location where the Personal Data are stored.
+        Place of processing: US &ndash;{' '}
+        <a href="https://policies.google.com/privacy?hl=en" target="_blank" rel="noopener noreferrer">
+          Privacy Policy
+        </a>{' '}
+        &ndash;{' '}
+        <a href="https://tools.google.com/dlpage/gaoptout?hl=en" target="_blank" rel="noopener noreferrer">
+          Opt Out
+        </a>
       </P>
-      <P>Firebase Realtime Database (Google Inc.)</P>
+      <P>
+        <ins>Hosting and backend infrastructure</ins>
+      </P>
+      <P>
+        This type of service has the purpose of hosting data and files that enable this Application to run and be
+        distributed as well as to provide a ready-made infrastructure to run specific features or parts of this
+        Application. Some of these services work through geographically distributed servers, making it difficult to
+        determine the actual location where the Personal Data are stored.
+      </P>
+      <P>
+        <strong>Firebase Realtime Database (Google Inc.)</strong>
+      </P>
       <P>Firebase Realtime Database is a hosting and backend service provided by Google Inc.</P>
       <P>
         Personal Data collected: Usage Data and various types of Data as specified in the privacy policy of the service.
       </P>
-      <P>Place of processing: USA &ndash; Privacy Policy</P>
-      <P>Firebase Hosting (Firebase, Inc.)</P>
+      <P>
+        Place of processing: USA &ndash;{' '}
+        <a href="https://policies.google.com/privacy?hl=en" target="_blank" rel="noopener noreferrer">
+          Privacy Policy
+        </a>
+      </P>
+      <P>
+        <strong>Firebase Hosting (Firebase, Inc.)</strong>
+      </P>
       <P>Firebase Hosting is a hosting service provided by Google Inc.</P>
       <P>Personal Data collected: various types of Data as specified in the privacy policy of the service.</P>
-      <P>Place of processing: US &ndash; Privacy Policy</P>
+      <P>
+        Place of processing: US &ndash;{' '}
+        <a href="https://policies.google.com/privacy?hl=en" target="_blank" rel="noopener noreferrer">
+          Privacy Policy
+        </a>
+      </P>
       <Header>Additional information about Data collection and processing</Header>
-      <Header>Legal action</Header>
+      <P>
+        <strong>Legal action</strong>
+      </P>
       <P>
         The User's Personal Data may be used for legal purposes by the Data Controller, in Court or in the stages
         leading to possible legal action arising from improper use of this Website or the related services.
@@ -185,10 +232,12 @@ const PrivacyPolicy = props => {
       </P>
 
       <Header>Information about this privacy policy</Header>
-      <P>The Data Controller is responsible for this privacy policy,</P>
+      <P>The Data Controller is responsible for this privacy policy.</P>
 
       <Header>Definitions and legal references</Header>
-      <P>Personal Data (or Data)</P>
+      <P>
+        <ins>Personal Data (or Data)</ins>
+      </P>
       <P>
         Any information regarding a natural person, a legal person, an institution or an association, which is, or can
         be, identified, even indirectly, by reference to any other information, including a personal identification

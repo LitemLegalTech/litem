@@ -18,7 +18,7 @@ class DropdownWrapper extends React.Component {
     });
     const answer = {
       question: this.props.q.id,
-      answer: [{ [item.id]: item.id }],
+      answer: [{ id: item.id, value: item.id, label: item.label }],
       nxtQ: item.nxtQ
     };
     this.props.callback(answer);
@@ -33,7 +33,7 @@ class DropdownWrapper extends React.Component {
     });
 
   render() {
-    console.log(this.props.q);
+    //console.log(this.props.q);
     const hidden = this.state.hidden;
     const label = this.state.label;
     return (

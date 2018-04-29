@@ -10,7 +10,7 @@ export const CustomDropdown = styled(Dropdown)`
   font-family: 'Quicksand';
 `;
 
-export const CustomDropdownButton = styled(Button)`
+/*export const CustomDropdownButton = styled(Button)`
   max-width: 98vw;
   min-width: 300px;
   border-radius: 50px;
@@ -25,9 +25,26 @@ export const CustomDropdownButton = styled(Button)`
     outline: none;
     box-shadow: none;
   }
+`;*/
+export const CustomDropdownButton = styled(Button)`
+  max-width: 98vw;
+  min-width: 300px;
+  border-radius: 50px;
+  background-color: rgba(252, 207, 77, 0.8);
+  padding-left: 25px;
+  padding-right: 25px;
+  white-space: normal;
+  word-break: break-word;
+  border: none;
+  &:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
 `;
 
 export const CustomDropdownMenu = styled(DropdownMenu)`
+  z-index: auto;
   width: 92%;
   margin-left: 4%;
   border: none;

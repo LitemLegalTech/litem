@@ -8,15 +8,16 @@ class FinancialInputs extends React.Component {
 
   handleChange = e => {
     const val = e.target.value === undefined ? 0 : e.target.value.replace(/^0+(?!\.|$)/, '');
-    this.setState({ [e.target.id]: val });
+    this.setState({
+      [e.target.id]: { id: e.target.id, value: val, label: e.target.name }
+    });
   };
 
   handleSubmit = e => {
     e.preventDefault();
-    console.log(e.target);
     const answer = {
       question: this.props.q.id,
-      answer: [this.state],
+      answer: Object.values(this.state),
       nxtQ: this.props.q.answers[0].nxtQ
     };
     this.props.callback(answer);
@@ -28,7 +29,13 @@ class FinancialInputs extends React.Component {
         {this.props.q.answers.map((item, index) => (
           <React.Fragment key={index}>
             <FinancialInput.Label htmlFor={item.qId}>{item.title}</FinancialInput.Label>
-            <FinancialInput.Input type="number" id={item.id} required onChange={e => this.handleChange(e)} />
+            <FinancialInput.Input
+              type="number"
+              id={item.id}
+              name={item.title}
+              required
+              onChange={e => this.handleChange(e)}
+            />
             <span />
           </React.Fragment>
         ))}
