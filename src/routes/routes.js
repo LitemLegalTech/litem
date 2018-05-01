@@ -9,7 +9,7 @@ import FAQs from './../containers/faqs/faqs';
 import Contact from './../containers/contact/contact';
 import ToolHub from './../containers/tool-hub/tool-hub';
 import TriageTool from './../containers/triage-tool/triage-tool';
-import PreCaseTool from './../containers/pre-case-tool/pre-case-tool';
+import PreTriageTool from './../containers/pre-triage-tool/pre-triage-tool';
 import PreValuerTool from './../containers/pre-valuer-tool/pre-valuer-tool';
 import PreLetterTool from './../containers/pre-letter-tool/pre-letter-tool';
 import Guides from './../containers/guides/guides';
@@ -45,7 +45,7 @@ class Routes extends Component {
               <Route exact path="/case-tool" component={TriageTool} />
               <Route exact path="/valuer" component={TriageTool} />
               <Route exact path="/valuerTEST" component={ValuationTool} />
-              <Route exact path="/pre-case-tool" component={PreCaseTool} />
+              <Route exact path="/pre-triage-tool" component={PreTriageTool} />
               <Route exact path="/pre-valuer-tool" component={PreValuerTool} />
               <Route exact path="/pre-letter-tool" component={PreLetterTool} />
               <Route exact path="/guides" component={Guides} />

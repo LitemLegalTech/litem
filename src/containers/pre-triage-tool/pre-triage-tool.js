@@ -6,7 +6,7 @@ import Container from './../../components/styled-components/container';
 
 import { pageView, handleNavClick } from './../../services/ga-helpers';
 
-class PreTool extends React.Component {
+class PreTriageTool extends React.Component {
   componentDidMount() {
     pageView(window.location.pathname);
   }
@@ -20,11 +20,15 @@ class PreTool extends React.Component {
         <P justify b="50px">
           Don't worry - you don't need to sign-up to get our advice and we don't take any personal details.
         </P>
-        <BtnGetStarted onClick={e => handleNavClick(e, this.props.history)} id="get started pre-case" name="case-tool">
+        <BtnGetStarted
+          onClick={e => handleNavClick(e, this.props.history)}
+          id="get started pre-triage"
+          name="triage-tool"
+        >
           Start
         </BtnGetStarted>
       </Container>
     );
   }
 }
-export default PreTool;
+export default PreTriageTool;

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import DOMPurify from 'dompurify';
+import { clicked } from './../../services/ga-helpers';
+
 import Header from './../../components/styled-components/header';
 import {
   DropdownGroup,
@@ -27,7 +29,7 @@ class Dropdowns extends Component {
       });
     return (
       <React.Fragment>
-        <Header t="50px" b="10px" dangerouslySetInnerHTML={title} />
+        <Header t="40px" b="10px" dangerouslySetInnerHTML={title} />
         <DropdownGroup>
           <DropdownTitle onClick={this.onDropdownClick}>{this.state.selected}</DropdownTitle>
           <DropdownMenu dropdownOpen={this.state.dropdownOpen} onClick={this.onDropdownClick}>
@@ -38,6 +40,7 @@ class Dropdowns extends Component {
                   onClick={() => {
                     this.props.callback(item.ansId, item.nxtQId);
                     this.setState({ selected: item.ansLabel });
+                    clicked(`triage-tool next on ${this.props.q.qId}`);
                   }}
                 >
                   {item.ansLabel}

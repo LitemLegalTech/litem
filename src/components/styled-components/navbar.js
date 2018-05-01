@@ -150,17 +150,26 @@ const Menu = styled.nav`
 
 class NavBar extends Component {
   state = {
-    menuOpen: false
+    menuOpen: false,
+    showHidden: false
   };
 
   onMenuButtonClick = () => {
     this.setState({ menuOpen: !this.state.menuOpen });
     window.scrollTo(0, 0);
   };
+
+  handleKeyDown = e => {
+    console.log(e.key);
+    if (e.key === 'Control') {
+      this.setState({ showHidden: true });
+    }
+  };
+
   render() {
     return (
       <React.Fragment>
-        <MenuButton active={this.state.menuOpen} onClick={this.onMenuButtonClick}>
+        <MenuButton active={this.state.menuOpen} onKeyDown={this.handleKeyDown} onClick={this.onMenuButtonClick}>
           <span />
         </MenuButton>
         <Menu menuOpen={this.state.menuOpen} onClick={this.onMenuButtonClick}>
@@ -168,7 +177,7 @@ class NavBar extends Component {
           <Link to="/" id="menu home" onClick={e => clicked(e.target.id)}>
             Home
           </Link>
-          <Link to="/tool-hub" id="menu case" onClick={e => clicked(e.target.id)}>
+          <Link to="/tool-hub" id="menu triage" onClick={e => clicked(e.target.id)}>
             Do I have a good case?
           </Link>
           <Link
@@ -185,21 +194,22 @@ class NavBar extends Component {
           <Link to="/contact" id="menu contact" onClick={e => clicked(e.target.id)}>
             Get in Touch
           </Link>
-          <Link style={{ color: '#42506b' }} to="/valuerTEST">
-            valuerTEST
-          </Link>
-          <Link
-            style={{ color: '#42506b' }}
-            to="/"
-            id="menu start fresh"
-            onClick={e => {
-              clicked(e.target.id);
-              localStorage.clear();
-              this.props.RootStore.SessionStore.setUserObj();
-            }}
-          >
-            Start Fresh
-          </Link>
+          {this.state.showHidden && (
+            <React.Fragment>
+              <Link to="/valuerTEST">valuerTEST</Link>
+              <Link
+                to="/"
+                id="menu start fresh"
+                onClick={e => {
+                  clicked(e.target.id);
+                  localStorage.clear();
+                  this.props.RootStore.SessionStore.setUserObj();
+                }}
+              >
+                Start Fresh
+              </Link>
+            </React.Fragment>
+          )}
         </Menu>
       </React.Fragment>
     );

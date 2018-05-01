@@ -1,7 +1,5 @@
 import React from 'react';
 
-//import Feedback from './../feedback/feedback';
-
 import Container from './../../components/styled-components/container';
 import P from './../../components/styled-components/p';
 import Title from './../../components/styled-components/title';
@@ -38,7 +36,6 @@ class PostCase extends React.Component {
           Alternatively, if you would like to get some further advice from a solicitor or if you have any questions,
           feel free to drop us an email at info@litem.co.uk.
         </P>
-        {/*<Feedback />*/}
       </Container>
     );
   }

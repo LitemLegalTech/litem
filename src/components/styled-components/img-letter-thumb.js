@@ -5,5 +5,6 @@ const ImgLetterThumb = styled.img`
   max-width: 300px;
   margin-left: auto;
   margin-right: auto;
+  cursor: pointer;
 `;
 export default ImgLetterThumb;

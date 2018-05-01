@@ -23,7 +23,7 @@ import Buttons from './buttons';
 import Dropdowns from './dropdowns';
 import Texts from './texts';
 import Dates from './dates';
-import PostCaseTool from './../post-case-tool/post-case-tool';
+import PostTriageTool from './../post-triage-tool/post-triage-tool';
 import PreLetter from './../pre-letter-tool/pre-letter-tool';
 import PostLetter from './../post-letter-tool/post-letter-tool';
 
@@ -141,7 +141,7 @@ class Section1 extends Component {
     let nxtQId = this.state.nxtQId === '' ? this.qs[this.qId].nxtQId : this.state.nxtQId;
     if (this.qs[this.qId].type === 'advice') value = 'advice';
     if (this.qs[this.qId].type === 'preletter') value = 'preletter';
-    if (this.qs[this.qId].type === 'postCaseTool') value = 'postCaseTool';
+    if (this.qs[this.qId].type === 'PostTriageTool') value = 'PostTriageTool';
     if (this.qs[this.qId].type === 'preCaseTool') value = 'preCaseTool';
     if (!value || !nxtQId) return alert('please enter an answer');
     this.props.RootStore.SessionStore.handleNext(value, nxtQId);
@@ -261,9 +261,9 @@ class Section1 extends Component {
           />
         );
         break;
-      case 'postCaseTool':
+      case 'PostTriageTool':
         this.input = (
-          <PostCaseTool
+          <PostTriageTool
             history={this.props.history}
             allQs={this.qs}
             q={this.qs[this.qId]}
@@ -370,7 +370,7 @@ class Section1 extends Component {
                   right
                   type="submit"
                   className={this.qs[this.qId].type === 'weak' && 'disabled'}
-                  onClick={() => clicked(`case-tool next on ${this.qId}`)}
+                  onClick={() => clicked(`triage-tool next on ${this.qId}`)}
                   disabled={this.qs[this.qId].type === 'weak'}
                 >
                   {this.qs[this.qId].type === 'letter' ? 'finalise letter' : 'Next'}
@@ -384,9 +384,9 @@ class Section1 extends Component {
                     type="button"
                     onClick={() => {
                       setTimeout(() => {
-                        this.props.RootStore.SessionStore.handleNext('postCaseTool', 'postLetter');
+                        this.props.RootStore.SessionStore.handleNext('PostTriageTool', 'postLetter');
                       }, 2000);
-                      clicked('case-tool copy letter');
+                      clicked('triage-tool copy letter');
                     }}
                   >
                     copy
@@ -397,9 +397,9 @@ class Section1 extends Component {
                     onClick={() => {
                       window.print();
                       setTimeout(() => {
-                        this.props.RootStore.SessionStore.handleNext('postCaseTool', 'postLetter');
+                        this.props.RootStore.SessionStore.handleNext('PostTriageTool', 'postLetter');
                       }, 2000);
-                      clicked('case-tool print letter');
+                      clicked('triage-tool print letter');
                     }}
                   >
                     print
@@ -410,7 +410,7 @@ class Section1 extends Component {
                   right
                   onClick={() => {
                     this.props.history.push('/');
-                    clicked('case-tool home letter');
+                    clicked('triage-tool home letter');
                   }}
                 >
                   home

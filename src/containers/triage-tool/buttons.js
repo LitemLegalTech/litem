@@ -1,6 +1,8 @@
 import React from 'react';
 import { observer, inject } from 'mobx-react';
 import DOMPurify from 'dompurify';
+import { clicked } from './../../services/ga-helpers';
+
 import Header from './../../components/styled-components/header';
 import Btn from './../../components/styled-components/btn';
 import BtnGroup from './../../components/styled-components/btn-group';
@@ -19,6 +21,7 @@ const Buttons = inject('RootStore')(
               type="submit"
               onClick={() => {
                 props.callback(item.ansId, item.nxtQId);
+                clicked(`triage-tool next on ${props.q.qId}`);
               }}
             >
               {item.ansLabel}

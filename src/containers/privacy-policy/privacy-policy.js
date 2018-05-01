@@ -127,7 +127,9 @@ const PrivacyPolicy = props => {
         The services contained in this section enable the Owner to monitor and analyze web traffic and can be used to
         keep track of User behavior.
       </P>
-      <P>Google Analytics (Google Inc.)</P>
+      <P>
+        <strong>Google Analytics (Google Inc.)</strong>
+      </P>
       <P>
         Google Analytics is a web analysis service provided by Google Inc. (&ldquo;Google&rdquo;). Google utilizes the
         Data collected to track and examine the use of this Application, to prepare reports on its activities and share
