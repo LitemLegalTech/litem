@@ -343,7 +343,7 @@ const data = {
   },
   valuation: {
     id: 'valuation',
-    title: 'Your Valuation',
+    title: '',
     type: 'Valuation'
   }
 };

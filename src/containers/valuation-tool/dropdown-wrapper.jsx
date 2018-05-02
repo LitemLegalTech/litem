@@ -33,7 +33,6 @@ class DropdownWrapper extends React.Component {
     });
 
   render() {
-    //console.log(this.props.q);
     const hidden = this.state.hidden;
     const label = this.state.label;
     return (
