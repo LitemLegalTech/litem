@@ -20,6 +20,10 @@ export default class mobxSessionStore {
   }
   @observable valuationObj = {};
   @observable currentQ = '';
+  @observable injuryType = {};
+  @observable injuryLocation = {};
+  @observable injuryDuration = {};
+  @observable injuries = [];
   @observable financialDetails = {};
 
   @action('setInitialQ')
@@ -57,11 +61,24 @@ export default class mobxSessionStore {
 
   @action('normaliseData')
   normaliseData = answer => {
+    console.log(answer);
+    if (answer.question === 'injuryType') {
+      console.log("answer.question === 'injuryType'");
+      this.injuryType = answer.answer[0].label;
+      if (answer.answer[0].question === 'tDental') this.injuryLocation = '';
+    }
     if (answer.nxtQ === 'duration') {
       console.log("answer.nxtQ === 'duration'");
+      this.injuryLocation = answer.answer[0].label;
     }
     if (answer.question === 'duration') {
       console.log("answer.question === 'duration'");
+      this.injuryDuration = answer.answer[0].label;
+      this.injuries.push({
+        injuryType: this.injuryType,
+        injuryLocation: this.injuryLocation,
+        injuryDuration: this.injuryDuration
+      });
     }
     if (answer.question === 'financial') {
       console.log("answer.question === 'financial'");
@@ -69,7 +86,6 @@ export default class mobxSessionStore {
         total[current.id] = current.value;
         return total;
       }, {});
-      console.log(this.financialDetails);
     }
   };
 

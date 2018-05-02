@@ -90,7 +90,6 @@ class ValuationTool extends React.Component {
     const q = this.props.RootStore.ValuationStore.valuationObj.data[this.props.RootStore.ValuationStore.currentQ];
     const lastQs = this.props.RootStore.ValuationStore.valuationObj.lastQs;
     const navItems = this.state.navItems;
-
     return (
       <React.Fragment>
         <Sidebar lastQs={lastQs} open={this.state.open} callback={() => this.setState({ open: !this.state.open })} />

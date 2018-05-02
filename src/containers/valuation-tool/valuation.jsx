@@ -21,7 +21,8 @@ class Valuation extends React.Component {
       fOther,
       fRepairs
     } = this.props.RootStore.ValuationStore.financialDetails;
-    const injuries = [{ txt: 'injury', injuryDuration: 12 }];
+    const injuries = this.props.RootStore.ValuationStore.injuries;
+    console.log(injuries);
     return (
       <Container>
         <Header>Here is your valuation</Header>
@@ -58,7 +59,7 @@ class Valuation extends React.Component {
           {injuries.map((item, i) => {
             return (
               <List.Item key={i}>
-                {item.txt} which lasted for {item.injuryDuration} {item.injuryDuration < 2 ? 'day' : 'days'}.
+                {item.injuryType} to your {item.injuryLocation} which lasted {item.injuryDuration}.
               </List.Item>
             );
           })}
