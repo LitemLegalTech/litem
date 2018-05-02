@@ -21,7 +21,7 @@ class PostCase extends React.Component {
           <List.Item>write to the defendant (click next).</List.Item>
           <List.Item>
             find out what your case is worth (<Link
-              id="post case tool valuer"
+              id="post triage tool valuer"
               name="pre-valuer-tool"
               onClick={e => handleNavClick(e, this.props.history)}
             >

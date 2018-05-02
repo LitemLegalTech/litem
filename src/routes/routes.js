@@ -42,7 +42,7 @@ class Routes extends Component {
               <Route exact path="/faqs" component={FAQs} />
               <Route exact path="/tool-hub" component={ToolHub} />
               <Route exact path="/contact" component={Contact} />
-              <Route exact path="/case-tool" component={TriageTool} />
+              <Route exact path="/triage-tool" component={TriageTool} />
               <Route exact path="/valuer" component={TriageTool} />
               <Route exact path="/valuerTEST" component={ValuationTool} />
               <Route exact path="/pre-triage-tool" component={PreTriageTool} />

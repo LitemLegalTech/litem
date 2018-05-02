@@ -50,8 +50,8 @@ class Section1 extends Component {
   componentWillMount() {
     this.props.RootStore.UIStore.handleFadeIn();
     if (this.props.history.location.pathname === '/valuer') this.props.RootStore.UIStore.setCurrentSection('valuer');
-    if (this.props.history.location.pathname === '/case-tool')
-      this.props.RootStore.UIStore.setCurrentSection('caseTool');
+    if (this.props.history.location.pathname === '/triage-tool')
+      this.props.RootStore.UIStore.setCurrentSection('triageTool');
   }
   componentDidMount() {
     pageView(window.location.pathname);
@@ -162,6 +162,8 @@ class Section1 extends Component {
     });
 
   render() {
+    console.log(this.props.RootStore.SessionStore.userObj.allQs);
+    console.log(this.props.RootStore.SessionStore.currentQId);
     this.qs = this.props.RootStore.SessionStore.userObj.allQs;
     this.qId = this.props.RootStore.SessionStore.currentQId;
     const qType = this.qs[this.qId].type;
@@ -336,7 +338,7 @@ class Section1 extends Component {
                   type="button"
                   onClick={() => {
                     this.handleBack();
-                    clicked(`case-tool back on ${this.qId}`);
+                    clicked(`triage-tool back on ${this.qId}`);
                   }}
                   disabled={this.qs[this.qId].qId === 'moreThan3Years'}
                 >
@@ -347,10 +349,10 @@ class Section1 extends Component {
                   left
                   type="button"
                   onClick={() => {
-                    this.props.history.push(`case-tool`);
-                    this.props.RootStore.UIStore.setCurrentSection('caseTool');
+                    this.props.history.push(`triage-tool`);
+                    this.props.RootStore.UIStore.setCurrentSection('triageTool');
                   }}
-                  name="caseTool"
+                  name="triageTool"
                 >
                   Go to Case Tool
                 </BtnBottom>
@@ -360,7 +362,7 @@ class Section1 extends Component {
                   right
                   onClick={() => {
                     this.props.history.push('/');
-                    clicked('case-tool home letter');
+                    clicked('triage-tool home letter');
                   }}
                 >
                   home

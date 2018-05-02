@@ -29,7 +29,7 @@ const Weak = inject('RootStore')(
           )}
           If you would like us to suggest a lawyer who specialises in such cases to provide further advice, feel free to
           send us a message{' '}
-          <Link id="case tool weak" name="contact" onClick={e => handleNavClick(e, props.history)}>
+          <Link id="triage tool weak" name="contact" onClick={e => handleNavClick(e, props.history)}>
             here
           </Link>{' '}
           or email us at info@litem.co.uk.

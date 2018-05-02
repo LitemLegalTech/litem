@@ -34,7 +34,7 @@ class PreTool extends React.Component {
             name="guides"
             onClick={() => {
               this.props.history.push('guides');
-              this.props.setSection('guides');
+              this.props.RootStore.UIStore.setCurrentSection('guides');
             }}
           >
             our guide

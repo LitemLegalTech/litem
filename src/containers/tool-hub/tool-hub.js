@@ -56,7 +56,7 @@ class ToolHub extends Component {
               name="guides"
               onClick={() => {
                 this.props.history.push('guides');
-                this.props.setSection('guides');
+                this.props.RootStore.UIStore.setCurrentSection('guides');
               }}
             >
               our guides
@@ -69,7 +69,7 @@ class ToolHub extends Component {
             <Btn
               b="20px"
               onClick={e => handleNavClick(e, this.props.history)}
-              id="tool-hub case"
+              id="tool-hub triage"
               name="pre-triage-tool"
             >
               Do I have a case?

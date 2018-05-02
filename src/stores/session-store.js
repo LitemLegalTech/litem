@@ -24,7 +24,7 @@ export default class mobxSessionStore {
     } else {
       this.userObj = {
         lastQIds: {
-          caseTool: ['start'],
+          triageTool: ['start'],
           valuer: ['start']
         },
         allQs: Data,
@@ -56,7 +56,7 @@ export default class mobxSessionStore {
 
   @action('setInitialQ')
   setInitialQ = () => {
-    if (this.RootStore.UIStore.currentSection !== 'caseTool' && this.RootStore.UIStore.currentSection !== 'valuer')
+    if (this.RootStore.UIStore.currentSection !== 'triageTool' && this.RootStore.UIStore.currentSection !== 'valuer')
       return;
     if (this.userObj.lastQIds === undefined) {
       this.setUserObj();
@@ -64,7 +64,7 @@ export default class mobxSessionStore {
     }
     this.currentQId =
       this.userObj.lastQIds[this.RootStore.UIStore.currentSection].length === 1
-        ? this.RootStore.UIStore.currentSection === 'caseTool' ? 'moreThan3Years' : 'val0'
+        ? this.RootStore.UIStore.currentSection === 'triageTool' ? 'moreThan3Years' : 'val0'
         : this.userObj.lastQIds[this.RootStore.UIStore.currentSection].pop();
   };
 
