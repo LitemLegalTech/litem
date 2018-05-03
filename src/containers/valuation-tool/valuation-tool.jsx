@@ -56,7 +56,7 @@ class ValuationTool extends React.Component {
       component: this.props.RootStore.ValuationStore.valuationObj.data[this.props.RootStore.ValuationStore.currentQ]
         .type
     });
-    if (this.props.RootStore.ValuationStore.currentQ === 'duration') this.props.RootStore.ValuationStore.addInjury();
+    if (this.props.RootStore.ValuationStore.currentQ === 'addInjury') this.props.RootStore.ValuationStore.addInjury();
     this.handleNavItems();
     this.props.RootStore.UIStore.handleFadeIn();
   };
@@ -77,7 +77,7 @@ class ValuationTool extends React.Component {
   handleNavigation = navEvent => {
     switch (navEvent.item) {
       case 'back':
-        if (this.props.RootStore.ValuationStore.currentQ === 'duration')
+        if (this.props.RootStore.ValuationStore.currentQ === 'addInjury')
           this.props.RootStore.ValuationStore.removeLastInjury();
         if (this.props.RootStore.ValuationStore.valuationObj.lastQs.length > 0) {
           let lastQs = this.props.RootStore.ValuationStore.valuationObj.lastQs;
@@ -97,7 +97,7 @@ class ValuationTool extends React.Component {
       case 'clear':
         this.props.RootStore.ValuationStore.handleAnswer([], '', '');
         localStorage.removeItem('valuationObj');
-        this.props.RootStore.ValuationStore.setInitialQ();
+        this.props.RootStore.ValuationStore.setValuationObj();
         break;
       default:
         break;
