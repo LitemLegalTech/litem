@@ -38,6 +38,7 @@ class ValuationTool extends React.Component {
 
   componentDidMount() {
     pageView(window.location.pathname);
+    this.handleNavItems();
     setTimeout(() => {
       this.setState({
         component: this.props.RootStore.ValuationStore.valuationObj.data[this.props.RootStore.ValuationStore.currentQ]
@@ -47,25 +48,62 @@ class ValuationTool extends React.Component {
   }
 
   handleAnswer = answer => {
-    let navItems = this.state.navItems;
-    if (navItems.indexOf('back') === -1) navItems.push('back');
-    if (navItems.indexOf('hist') === -1) navItems.push('hist');
-
     let lastQs = this.props.RootStore.ValuationStore.valuationObj.lastQs;
     lastQs.push(answer);
     this.props.RootStore.ValuationStore.handleAnswer(lastQs, answer, answer.nxtQ);
 
     this.setState({
       component: this.props.RootStore.ValuationStore.valuationObj.data[this.props.RootStore.ValuationStore.currentQ]
-        .type,
-      navItems: navItems
+        .type
     });
-
+    if (this.props.RootStore.ValuationStore.currentQ === 'duration') this.props.RootStore.ValuationStore.addInjury();
+    this.handleNavItems();
     this.props.RootStore.UIStore.handleFadeIn();
   };
 
+  handleNavItems = () => {
+    if (
+      this.props.RootStore.ValuationStore.valuationObj.injuries.length === 0 &&
+      this.props.RootStore.ValuationStore.currentQ === this.props.RootStore.ValuationStore.firstQ
+    ) {
+      console.log('this is the first question');
+      this.setState({ navItems: [] });
+    } else {
+      console.log('this is not the first question');
+      this.setState({ navItems: ['back', 'hist', 'clear'] });
+    }
+  };
+  //move this to UI store
   handleNavigation = navEvent => {
-    if (navEvent.item === 'back') {
+    switch (navEvent.item) {
+      case 'back':
+        if (this.props.RootStore.ValuationStore.currentQ === 'duration')
+          this.props.RootStore.ValuationStore.removeLastInjury();
+        if (this.props.RootStore.ValuationStore.valuationObj.lastQs.length > 0) {
+          let lastQs = this.props.RootStore.ValuationStore.valuationObj.lastQs;
+          const nxtQ = lastQs.pop();
+          //this.props.RootStore.ValuationStore.handleAnswer(lastQs, nxtQ, nxtQ.question);
+          this.props.RootStore.ValuationStore.setCurrentQ(nxtQ.question);
+          this.props.RootStore.ValuationStore.setLocal();
+          this.setState({
+            component: this.props.RootStore.ValuationStore.valuationObj.data[nxtQ.question].type
+          });
+          this.handleNavItems();
+        }
+        break;
+      case 'hist':
+        this.setState({ open: !this.state.open });
+        break;
+      case 'clear':
+        this.props.RootStore.ValuationStore.handleAnswer([], '', '');
+        localStorage.removeItem('valuationObj');
+        this.props.RootStore.ValuationStore.setInitialQ();
+        break;
+      default:
+        break;
+    }
+
+    /*if (navEvent.item === 'back') {
       if (this.props.RootStore.ValuationStore.valuationObj.lastQs.length > 0) {
         let lastQs = this.props.RootStore.ValuationStore.valuationObj.lastQs;
         const nxtQ = lastQs.pop();
@@ -74,14 +112,18 @@ class ValuationTool extends React.Component {
           component: this.props.RootStore.ValuationStore.valuationObj.data[nxtQ.question].type
         });
       } else {
-        let navItems = this.state.navItems;
+        /*let navItems = this.state.navItems;
         navItems.splice(navItems.indexOf('back'), 1);
         navItems.splice(navItems.indexOf('hist'), 1);
-        this.setState({ navItems: navItems });
+        navItems.splice(navItems.indexOf('clear'), 1);
+        this.setState({ navItems: navItems });*/
+    /*this.setState({ navItems: [] });
       }
     } else if (navEvent.item === 'hist') {
       this.setState({ open: !this.state.open });
-    }
+    } else if (navEvent.item === 'clear') {
+      this.setState({ open: !this.state.open });
+    }*/
     this.props.RootStore.UIStore.handleFadeIn();
   };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { observer, inject } from 'mobx-react';
-import Container from './../../components/styled-components/container';
+//import Container from './../../components/styled-components/container';
 //import Title from './../../components/styled-components/title';
 import Header from './../../components/styled-components/header';
 import P from './../../components/styled-components/p';
@@ -18,15 +18,15 @@ class Valuation extends React.Component {
       fMedication,
       fRepairs,
       fOther
-    } = this.props.RootStore.ValuationStore.financialDetails;
+    } = this.props.RootStore.ValuationStore.valuationObj.financialDetails;
 
-    const totalInjuryValue = this.props.RootStore.ValuationStore.injuryValues.reduce(
+    const totalInjuryValue = this.props.RootStore.ValuationStore.valuationObj.injuryValues.reduce(
       (accumulator, currentValue) => accumulator + currentValue
     );
     const totalClaimValue = fTravel + fTreatment + fEarnings + fMedication + fRepairs + fOther + totalInjuryValue;
-    const injuries = this.props.RootStore.ValuationStore.injuries;
+    const injuries = this.props.RootStore.ValuationStore.valuationObj.injuries;
     return (
-      <Container>
+      <React.Fragment>
         <Header>Here is your valuation</Header>
         <P>
           <strong>SUMMARY</strong>
@@ -88,7 +88,7 @@ class Valuation extends React.Component {
             </List.OrderedList>
           </React.Fragment>
         )}
-      </Container>
+      </React.Fragment>
     );
   }
 }

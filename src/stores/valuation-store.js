@@ -3,36 +3,26 @@ import Data from './data-valuation.js';
 
 useStrict(true);
 
-//config for the tool
-const firstQ = 'injuryType';
-
-//lastQs array item
-/*
-{
-  question: this.props.q.id,
-  answer: [{ id: item.id, value: item.id, label: item.label }],
-  nxtQ: item.nxtQ
-}
-*/
 export default class mobxSessionStore {
   constructor(rootStore) {
     this.RootStore = rootStore;
   }
+  @observable firstQ = 'injuryType';
   @observable valuationObj = {};
   @observable currentQ = '';
-  @observable injuryType = {};
+  /*@observable injuryType = {};
   @observable injuryLocation = {};
   @observable injuryDuration = {};
   @observable injuries = [];
   @observable injuryValues = [1, 2, 3, 4, 5];
-  @observable financialDetails = {};
+  @observable financialDetails = {};*/
 
   @action('setInitialQ')
   setInitialQ = () => {
-    if (this.valuationObj.lastQs === undefined) {
+    if (this.valuationObj.data === undefined) {
       this.setValuationObj();
     } else if (this.valuationObj.lastQs.length === 0) {
-      this.currentQ = firstQ;
+      this.currentQ = this.firstQ;
     } else if (this.valuationObj.lastQs.length >= 1) {
       const lastQ = this.valuationObj.lastQs.pop();
       this.currentQ = lastQ.nxtQ;
@@ -47,7 +37,13 @@ export default class mobxSessionStore {
         ? JSON.parse(local)
         : {
             data: Data,
-            lastQs: []
+            lastQs: [],
+            injuryType: {},
+            injuryLocation: {},
+            injuryDuration: {},
+            injuries: [],
+            injuryValues: [0, 1, 2, 3, 4],
+            financialDetails: {}
           };
     this.setInitialQ();
   };
@@ -62,32 +58,41 @@ export default class mobxSessionStore {
 
   @action('normaliseData')
   normaliseData = answer => {
-    console.log(answer);
+    //console.log(answer);
     if (answer.question === 'injuryType') {
       console.log("answer.question === 'injuryType'");
-      this.injuryType = answer.answer[0].label;
-      if (answer.answer[0].question === 'tDental') this.injuryLocation = '';
+      this.valuationObj.injuryType = answer.answer[0].label;
+      if (answer.answer[0].question === 'tDental') this.valuationObj.injuryLocation = '';
     }
     if (answer.nxtQ === 'duration') {
       console.log("answer.nxtQ === 'duration'");
-      this.injuryLocation = answer.answer[0].label;
+      this.valuationObj.injuryLocation = answer.answer[0].label;
     }
     if (answer.question === 'duration') {
       console.log("answer.question === 'duration'");
-      this.injuryDuration = answer.answer[0].label;
-      this.injuries.push({
-        injuryType: this.injuryType,
-        injuryLocation: this.injuryLocation,
-        injuryDuration: this.injuryDuration
-      });
+      this.valuationObj.injuryDuration = answer.answer[0].label;
     }
     if (answer.question === 'financial') {
       console.log("answer.question === 'financial'");
-      this.financialDetails = answer.answer.reduce(function(total, current) {
+      this.valuationObj.financialDetails = answer.answer.reduce(function(total, current) {
         total[current.id] = parseInt(current.value, 10);
         return total;
       }, {});
     }
+  };
+
+  @action('addInjury')
+  addInjury = () => {
+    this.valuationObj.injuries.push({
+      injuryType: this.valuationObj.injuryType,
+      injuryLocation: this.valuationObj.injuryLocation,
+      injuryDuration: this.valuationObj.injuryDuration
+    });
+  };
+
+  @action('removeLastInjury')
+  removeLastInjury = () => {
+    this.valuationObj.injuries.pop();
   };
 
   @action('setCurrentQ')
