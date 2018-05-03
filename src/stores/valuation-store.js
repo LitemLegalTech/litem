@@ -24,6 +24,7 @@ export default class mobxSessionStore {
   @observable injuryLocation = {};
   @observable injuryDuration = {};
   @observable injuries = [];
+  @observable injuryValues = [1, 2, 3, 4, 5];
   @observable financialDetails = {};
 
   @action('setInitialQ')
@@ -83,7 +84,7 @@ export default class mobxSessionStore {
     if (answer.question === 'financial') {
       console.log("answer.question === 'financial'");
       this.financialDetails = answer.answer.reduce(function(total, current) {
-        total[current.id] = current.value;
+        total[current.id] = parseInt(current.value, 10);
         return total;
       }, {});
     }
