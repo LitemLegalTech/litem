@@ -12,7 +12,7 @@ const BtnScrollDown = styled.button`
     outline: none;
   }
   &:before {
-    content: '⮟';
+    content: '\\2B9F';
     font-size: 2rem;
     color: black;
     opacity: 0.4;
