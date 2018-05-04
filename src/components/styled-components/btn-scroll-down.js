@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 //content: '\\2B9F';
 
-const BtnScrollDown = styled.button`
+const BtnScrollDown = styled.div`
   position: fixed;
-  bottom: 10px;
+  bottom: 4px;
   left: 50%;
   margin-left: -26px;
   cursor: pointer;
@@ -15,11 +15,10 @@ const BtnScrollDown = styled.button`
     height: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-top: 20px solid black;
-    opacity: 0.3;
+    border-top: 20px solid ${props => props.theme.colors.color1};
   }
 
-  animation: bounce 5s infinite;
+  animation: bounce 4s infinite;
   @keyframes bounce {
     0%,
     20%,
@@ -27,12 +26,15 @@ const BtnScrollDown = styled.button`
     80%,
     100% {
       transform: translateY(0);
+      opacity: 0.9;
     }
     40% {
       transform: translateY(-10px);
+      opacity: 0.4;
     }
     60% {
-      transform: translateY(-7px);
+      transform: translateY(-4px);
+      opacity: 0.9;
     }
   }
 `;

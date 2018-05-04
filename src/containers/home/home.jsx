@@ -58,7 +58,6 @@ class Home extends Component {
             onClick={() => {
               const height = window.screen.height - window.screen.height * 0.1;
               Scroll.animateScroll.scrollMore(height);
-              console.log(window.screen.height);
             }}
           />
         </Container>
