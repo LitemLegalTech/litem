@@ -3,12 +3,13 @@ import styled from 'styled-components';
 
 const BtnScrollDown = styled.button`
   position: fixed;
-  bottom: 15px;
-  left: 49%;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -26px;
   cursor: pointer;
   border: none;
   background-color: rgba(0, 0, 0, 0);
-  &:before {
+  &:after {
     content: '';
     width: 0;
     height: 0;
