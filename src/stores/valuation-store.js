@@ -1,5 +1,6 @@
 import { observable, action, computed, useStrict } from 'mobx';
 import Data from './data-valuation.js';
+import valuationTable from './valuerData.json';
 
 useStrict(true);
 
@@ -10,12 +11,6 @@ export default class mobxSessionStore {
   @observable firstQ = 'injuryType';
   @observable valuationObj = {};
   @observable currentQ = '';
-  /*@observable injuryType = {};
-  @observable injuryLocation = {};
-  @observable injuryDuration = {};
-  @observable injuries = [];
-  @observable injuryValues = [1, 2, 3, 4, 5];
-  @observable financialDetails = {};*/
 
   @action('setInitialQ')
   setInitialQ = () => {
@@ -42,7 +37,6 @@ export default class mobxSessionStore {
             injuryLocation: {},
             injuryDuration: {},
             injuries: [],
-            injuryValues: [0, 1, 2, 3, 4],
             financialDetails: {}
           };
     this.setInitialQ();
@@ -58,22 +52,17 @@ export default class mobxSessionStore {
 
   @action('normaliseData')
   normaliseData = answer => {
-    //console.log(answer);
     if (answer.question === 'injuryType') {
-      console.log("answer.question === 'injuryType'");
       this.valuationObj.injuryType = answer.answer[0].label;
       if (answer.answer[0].question === 'tDental') this.valuationObj.injuryLocation = '';
     }
     if (answer.nxtQ === 'duration') {
-      console.log("answer.nxtQ === 'duration'");
       this.valuationObj.injuryLocation = answer.answer[0].label;
     }
     if (answer.question === 'duration') {
-      console.log("answer.question === 'duration'");
       this.valuationObj.injuryDuration = answer.answer[0].label;
     }
     if (answer.question === 'financial') {
-      console.log("answer.question === 'financial'");
       this.valuationObj.financialDetails = answer.answer.reduce(function(total, current) {
         total[current.id] = parseInt(current.value, 10);
         return total;
@@ -81,12 +70,104 @@ export default class mobxSessionStore {
     }
   };
 
+  @computed
+  get injuryValue() {
+    let injuryType;
+    switch (this.valuationObj.injuryType) {
+      case 'Soft tissue / ligament / bruising':
+        injuryType = 'soft';
+        break;
+      case 'Fracture':
+        injuryType = 'fracture';
+        break;
+      default:
+        break;
+    }
+    let injuryLocation;
+    switch (this.valuationObj.injuryLocation) {
+      case 'Neck':
+        injuryLocation = 'neck';
+        break;
+      case 'Shoulders':
+        injuryLocation = 'shoulder';
+        break;
+      case 'Back':
+        injuryLocation = 'back';
+        break;
+      case 'Pelvis / hips':
+        injuryLocation = 'pelvis';
+        break;
+      case 'Hand':
+        injuryLocation = 'hand';
+        break;
+      case 'Wrist':
+        injuryLocation = 'wrist';
+        break;
+      case 'Elbow':
+        injuryLocation = 'elbow';
+        break;
+      case 'Knee':
+        injuryLocation = 'knee';
+        break;
+      case 'Foot':
+        injuryLocation = 'foot';
+        break;
+      case 'Ankle':
+        injuryLocation = 'ankle';
+        break;
+      default:
+        break;
+    }
+    let injuryDuration;
+    switch (this.valuationObj.injuryDuration) {
+      case 'between a day and a week':
+        injuryDuration = '1wk';
+        break;
+      case 'between a week and 2 weeks':
+        injuryDuration = '2wks';
+        break;
+      case 'between 2 weeks and 3 weeks':
+        injuryDuration = '3wks';
+        break;
+      case 'between 3 weeks and a month':
+        injuryDuration = '4wks';
+        break;
+      case 'between a month and 2 months':
+        injuryDuration = '8wks';
+        break;
+      case 'between 2 months and 3 months':
+        injuryDuration = '13wks';
+        break;
+      case 'between 3 months and 6 months':
+        injuryDuration = '26wks';
+        break;
+      case 'between 6 months and a year':
+        injuryDuration = '52wks';
+        break;
+      case 'between a year and a year and a half':
+        injuryDuration = '76wks';
+        break;
+      case 'between a year and a half and 2 years':
+        injuryDuration = '104wks';
+        break;
+      case 'more than 2 years':
+        injuryDuration = 'longer';
+        break;
+      default:
+        break;
+    }
+    const val = valuationTable[injuryType][injuryLocation][injuryDuration];
+    return val;
+  }
+
   @action('addInjury')
   addInjury = () => {
+    console.log(this.injuryValue);
     this.valuationObj.injuries.push({
       injuryType: this.valuationObj.injuryType,
       injuryLocation: this.valuationObj.injuryLocation,
-      injuryDuration: this.valuationObj.injuryDuration
+      injuryDuration: this.valuationObj.injuryDuration,
+      injuryValue: this.injuryValue
     });
   };
 

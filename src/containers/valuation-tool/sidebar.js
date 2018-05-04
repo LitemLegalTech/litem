@@ -9,18 +9,16 @@ const Menu = styled.nav`
   top: 0;
   height: 100%;
   transition: width 0.2s;
-  width: ${props => (props.open ? '25%' : '0')};
+  width: ${props => (props.open ? '50%' : '0')};
   background-color: ${props => props.theme.colors.color3};
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-content: space-around;
+  text-align: center;
   padding-top: 50px;
   & p {
     transition: opacity 0.4s;
     opacity: ${props => (props.open ? '1' : '0')};
     color: white;
+    padding-left: 20px;
   }
 `;
 

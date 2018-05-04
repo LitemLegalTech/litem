@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
+import * as Scroll from 'react-scroll';
 
 import BtnGetStarted from './../../components/styled-components/btn-get-started';
+import BtnScrollDown from './../../components/styled-components/btn-scroll-down';
 import P from './../../components/styled-components/p';
 import Header from './../../components/styled-components/header';
 import Title from './../../components/styled-components/title';
@@ -52,6 +54,13 @@ class Home extends Component {
           >
             Start
           </BtnGetStarted>
+          <BtnScrollDown
+            onClick={() => {
+              const height = window.screen.height - window.screen.height * 0.1;
+              Scroll.animateScroll.scrollMore(height);
+              console.log(window.screen.height);
+            }}
+          />
         </Container>
         <Container style={{ backgroundColor: 'white' }}>
           <Title center t="70px" b="10px">

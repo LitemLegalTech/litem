@@ -64,7 +64,6 @@ class ToolHub extends Component {
             first. This includes a practical example of how someone would settle their case using Litem. If you are
             ready to get started please select one of our tools:
           </P>
-          {/*<Header>Please select one of the following:</Header>*/}
           <BtnGroup>
             <Btn
               b="20px"

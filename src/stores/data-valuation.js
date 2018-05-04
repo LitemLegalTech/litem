@@ -119,11 +119,6 @@ const data = {
         id: 'lSoftKnee',
         label: 'Knee',
         nxtQ: 'duration'
-      },
-      {
-        id: 'lSoftToe',
-        label: 'Toe',
-        nxtQ: 'duration'
       }
     ]
   },
@@ -272,12 +267,57 @@ const data = {
     answers: [
       {
         id: '<1wk',
-        label: 'between 1 day and 1 week',
+        label: 'between a day and a week',
         nxtQ: 'addInjury'
       },
       {
         id: '>1wk<2wks',
-        label: 'between 1 week and 2 weeks',
+        label: 'between a week and 2 weeks',
+        nxtQ: 'addInjury'
+      },
+      {
+        id: '>2wks<3wks',
+        label: 'between 2 weeks and 3 weeks',
+        nxtQ: 'addInjury'
+      },
+      {
+        id: '>3wks<4wks',
+        label: 'between 3 weeks and a month',
+        nxtQ: 'addInjury'
+      },
+      {
+        id: '>4wks<8wks',
+        label: 'between a month and 2 months',
+        nxtQ: 'addInjury'
+      },
+      {
+        id: '>8wks<13wks',
+        label: 'between 2 months and 3 months',
+        nxtQ: 'addInjury'
+      },
+      {
+        id: '>13wks<26wks',
+        label: 'between 3 months and 6 months',
+        nxtQ: 'addInjury'
+      },
+      {
+        id: '>26wks<52wks',
+        label: 'between 6 months and a year',
+        nxtQ: 'addInjury'
+      },
+      {
+        id: '>52wks<76wks',
+        label: 'between a year and a year and a half',
+        nxtQ: 'addInjury'
+      },
+      {
+        id: '>76wks<104wks',
+        label: 'between a year and a half and 2 years',
+        nxtQ: 'addInjury'
+      },
+      {
+        id: '>104wks',
+        label: 'more than 2 years',
         nxtQ: 'addInjury'
       }
     ]

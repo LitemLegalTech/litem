@@ -19,12 +19,11 @@ class Valuation extends React.Component {
       fRepairs,
       fOther
     } = this.props.RootStore.ValuationStore.valuationObj.financialDetails;
-
-    const totalInjuryValue = this.props.RootStore.ValuationStore.valuationObj.injuryValues.reduce(
-      (accumulator, currentValue) => accumulator + currentValue
-    );
-    const totalClaimValue = fTravel + fTreatment + fEarnings + fMedication + fRepairs + fOther + totalInjuryValue;
     const injuries = this.props.RootStore.ValuationStore.valuationObj.injuries;
+    const injuryValues = injuries.map(a => a.injuryValue);
+    const totalInjuryValue = injuryValues.reduce((accumulator, currentValue) => accumulator + currentValue);
+    const totalClaimValue = fTravel + fTreatment + fEarnings + fMedication + fRepairs + fOther + totalInjuryValue;
+
     return (
       <React.Fragment>
         <Header>Here is your valuation</Header>
@@ -44,8 +43,10 @@ class Valuation extends React.Component {
           <strong>VALUE OF INJURY</strong>
         </P>
         {answers === 'valAnsFractureForearm' && (
-          <div>
-            <h6>FOREARM</h6>
+          <React.Fragment>
+            <P>
+              <strong>FOREARM</strong>
+            </P>
             <P>
               Serious fractures of one or both forearms where there is significant permanent residual disability whether
               functional or cosmetic.<br />£34,340 to £52,490
@@ -53,7 +54,7 @@ class Valuation extends React.Component {
             <P>
               Fractures of the Forearm<br />£5,810 to £16,830
             </P>
-          </div>
+          </React.Fragment>
         )}
 
         <P>You suffered from the following injuries:</P>
