@@ -1,22 +1,23 @@
 import styled from 'styled-components';
+//content: '\\2B9F';
 
 const BtnScrollDown = styled.button`
   position: fixed;
-  bottom: 10px;
-  left: 48%;
+  bottom: 15px;
+  left: 49%;
+  cursor: pointer;
   border: none;
   background-color: rgba(0, 0, 0, 0);
-  cursor: pointer;
-  &:focus {
-    border: none;
-    outline: none;
-  }
   &:before {
-    content: '\\2B9F';
-    font-size: 2rem;
-    color: black;
-    opacity: 0.4;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid black;
+    opacity: 0.3;
   }
+
   animation: bounce 5s infinite;
   @keyframes bounce {
     0%,
@@ -27,10 +28,10 @@ const BtnScrollDown = styled.button`
       transform: translateY(0);
     }
     40% {
-      transform: translateY(-20px);
+      transform: translateY(-10px);
     }
     60% {
-      transform: translateY(-10px);
+      transform: translateY(-7px);
     }
   }
 `;
