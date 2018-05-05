@@ -23,7 +23,7 @@ import ValuationTool from './../containers/valuation-tool/valuation-tool';
 @observer
 class Routes extends Component {
   componentDidMount() {
-    ReactGA.initialize('UA-77504696-3');
+    //ReactGA.initialize('UA-77504696-3');
     ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
