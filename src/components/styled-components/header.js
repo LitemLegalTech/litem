@@ -1,12 +1,11 @@
 import styled from 'styled-components';
-
-const Header = styled.h3`
-  display: flex;
+/* display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;*/
+const Header = styled.h3`
   margin-left: auto;
   margin-right: auto;
-  justify-content: center;
-  align-items: center;
   text-align: ${props => (props.center ? 'center' : props.justify ? 'justify' : 'left')};
   padding-top: ${props => (props.t ? props.t : '0')};
   padding-bottom: ${props => (props.b ? props.b : '0')};

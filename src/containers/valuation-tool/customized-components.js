@@ -3,6 +3,7 @@ import { Button } from 'styled-button-component';
 import { Dropdown, DropdownItem, DropdownMenu } from 'styled-dropdown-component';
 
 export const CustomDropdown = styled(Dropdown)`
+  display: inline-block;
   max-width: 98vw;
   margin-left: auto;
   margin-right: auto;
@@ -14,7 +15,7 @@ export const CustomDropdownButton = styled(Button)`
   max-width: 98vw;
   min-width: 350px;
   border-radius: 50px;
-  background-color: rgba(252, 207, 77, 0.8);
+  background-color: rgba(252, 207, 77, 0.4);
   padding-left: 25px;
   padding-right: 25px;
   white-space: normal;
@@ -28,6 +29,7 @@ export const CustomDropdownButton = styled(Button)`
 `;
 
 export const CustomDropdownMenu = styled(DropdownMenu)`
+  display: inline-block;
   z-index: auto;
   width: 92%;
   margin-left: 4%;
@@ -40,6 +42,10 @@ export const CustomDropdownItem = styled(DropdownItem)`
   word-break: break-word;
   padding-left: 1rem;
   padding-right: 1rem;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 `;
 
 export const CustomButton = styled(Button)`
@@ -76,5 +82,25 @@ export const CustomBottomButton = styled(Button)`
     border: none;
     outline: none;
     box-shadow: none;
+  }
+`;
+
+export const BtnPop = styled.div`
+  position: relative;
+  top: -10px;
+  line-height: 0.9rem;
+  display: inline-block;
+  &:after {
+    content: '?';
+    margin: auto;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid ${props => props.theme.colors.color1};
+    color: ${props => props.theme.colors.color1};
+    border-radius: 100%;
+    width: 0.9rem;
+    height: 0.9rem;
+    font-size: 0.9rem;
+    cursor: pointer;
   }
 `;

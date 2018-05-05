@@ -12,6 +12,7 @@ import Valuation from './valuation';
 import Navigation from './navigation';
 import ContactForm from './contact-form';
 import Sidebar from './sidebar';
+import Popover from './popover';
 
 const components = {
   Loader: Loader,
@@ -110,8 +111,14 @@ class ValuationTool extends React.Component {
       <React.Fragment>
         <Sidebar lastQs={lastQs} open={this.state.open} callback={() => this.setState({ open: !this.state.open })} />
         <Container>
-          {q.title && <Header t="40px">{q.title}</Header>}
+          {q.title && (
+            <Header t="40px">
+              {q.title}
+              <Popover title={q.popover.title} body={q.popover.body} />
+            </Header>
+          )}
           {q.body && q.body.map((item, key) => <P key={key}>{item}</P>)}
+
           <QuestionWrapper q={q} callback={answer => this.handleAnswer(answer)} />
           <Navigation callback={this.handleNavigation} navItems={navItems} />
         </Container>

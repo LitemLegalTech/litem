@@ -1,7 +1,11 @@
 const data = {
   injuryType: {
     id: 'injuryType',
-    title: 'What type of injury did you have? You can add more later.',
+    title: 'What type of injury did you have?',
+    popover: {
+      title: 'One injury at a time!',
+      body: "Don't worry, you can add more injuries later."
+    },
     body: [],
     placeholder: 'Choose the type of injury',
     type: 'Dropdown',
@@ -9,31 +13,55 @@ const data = {
       {
         id: 'tSoft',
         label: 'Soft tissue / ligament / bruising',
+        popover: {
+          title: 'Soft tissue injuries can be hard!',
+          body: 'This could include cuts and bruises, and ligament damage.'
+        },
         nxtQ: 'lSoft'
       },
       {
         id: 'tFracture',
         label: 'Fracture',
+        popover: {
+          title: 'Soft tissue injuries can be hard!',
+          body: 'This could include cuts and bruises, and ligament damage.'
+        },
         nxtQ: 'lFracture'
       },
       {
         id: 'tBurn',
         label: 'Burn / laceration / scarring',
+        popover: {
+          title: 'Soft tissue injuries can be hard!',
+          body: 'This could include cuts and bruises, and ligament damage.'
+        },
         nxtQ: 'lBurn'
       },
       {
         id: 'tPsych',
         label: 'Psychiatric',
+        popover: {
+          title: 'Soft tissue injuries can be hard!',
+          body: 'This could include cuts and bruises, and ligament damage.'
+        },
         nxtQ: 'lPsych'
       },
       {
         id: 'tDental',
         label: 'Damage to Teeth',
+        popover: {
+          title: 'Soft tissue injuries can be hard!',
+          body: 'This could include cuts and bruises, and ligament damage.'
+        },
         nxtQ: 'duration'
       },
       {
         id: 'tNone',
         label: 'None of the above',
+        popover: {
+          title: 'Soft tissue injuries can be hard!',
+          body: 'This could include cuts and bruises, and ligament damage.'
+        },
         nxtQ: 'contactMe'
       }
     ]
@@ -41,41 +69,73 @@ const data = {
   lSoft: {
     id: 'lSoft',
     title: 'Where was the injury located?',
+    popover: {
+      title: 'Soft tissue injuries can be hard!',
+      body: 'This could include cuts and bruises, and ligament damage.'
+    },
     type: 'Dropdown',
     answers: [
       {
         id: 'lSoftBrain',
         label: 'Brain injury / concussion',
+        popover: {
+          title: 'Soft tissue injuries can be hard!',
+          body: 'This could include cuts and bruises, and ligament damage.'
+        },
         nxtQ: 'contactMe'
       },
       {
         id: 'lSoftNeck',
         label: 'Neck',
+        popover: {
+          title: 'Soft tissue injuries can be hard!',
+          body: 'This could include cuts and bruises, and ligament damage.'
+        },
         nxtQ: 'duration'
       },
       {
         id: 'lSoftShoulders',
         label: 'Shoulders',
+        popover: {
+          title: 'Soft tissue injuries can be hard!',
+          body: 'This could include cuts and bruises, and ligament damage.'
+        },
         nxtQ: 'duration'
       },
       {
         id: 'lSoftBack',
         label: 'Back',
+        popover: {
+          title: 'Soft tissue injuries can be hard!',
+          body: 'This could include cuts and bruises, and ligament damage.'
+        },
         nxtQ: 'duration'
       },
       {
         id: 'lSoftPelvis',
         label: 'Pelvis / hips',
+        popover: {
+          title: 'Soft tissue injuries can be hard!',
+          body: 'This could include cuts and bruises, and ligament damage.'
+        },
         nxtQ: 'duration'
       },
       {
         id: 'lSoftLimb',
         label: 'Arm, leg, hand or foot area',
+        popover: {
+          title: 'Soft tissue injuries can be hard!',
+          body: 'This could include cuts and bruises, and ligament damage.'
+        },
         nxtQ: 'lSoftLimbDets'
       },
       {
         id: 'softOrgans',
         label: 'Internal Organs',
+        popover: {
+          title: 'Soft tissue injuries can be hard!',
+          body: 'This could include cuts and bruises, and ligament damage.'
+        },
         nxtQ: 'contactMe'
       }
     ]
