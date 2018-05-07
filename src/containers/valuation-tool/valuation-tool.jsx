@@ -68,7 +68,8 @@ class ValuationTool extends React.Component {
     ) {
       this.setState({ navItems: [] });
     } else {
-      this.setState({ navItems: ['back', 'hist', 'clear'] });
+      //this.setState({ navItems: ['back', 'hist', 'clear'] });
+      this.setState({ navItems: ['back'] });
     }
   };
   //move this to UI store
@@ -114,7 +115,7 @@ class ValuationTool extends React.Component {
           {q.title && (
             <Header t="40px">
               {q.title}
-              <Popover title={q.popover.title} body={q.popover.body} />
+              {q.popover && <Popover title={q.popover.title} body={q.popover.body} />}
             </Header>
           )}
           {q.body && q.body.map((item, key) => <P key={key}>{item}</P>)}

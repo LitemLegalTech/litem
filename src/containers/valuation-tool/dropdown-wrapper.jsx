@@ -43,9 +43,9 @@ class DropdownWrapper extends React.Component {
         </CustomDropdownButton>
         <CustomDropdownMenu hidden={hidden}>
           {this.props.q.answers.map((item, key) => (
-            <CustomDropdownItem key={key}>
-              <span onClick={() => this.handleClick(item)}>{item.label}</span>
-              <Popover title={item.popover.title} body={item.popover.body} />
+            <CustomDropdownItem key={key} onClick={() => this.handleClick(item)}>
+              <span>{item.label}</span>
+              {item.popover && <Popover title={item.popover.title} body={item.popover.body} />}
             </CustomDropdownItem>
           ))}
         </CustomDropdownMenu>

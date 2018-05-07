@@ -5,6 +5,7 @@ import { observer, inject } from 'mobx-react';
 import Header from './../../components/styled-components/header';
 import P from './../../components/styled-components/p';
 import List from './../../components/styled-components/list';
+import Popover from './popover';
 
 @inject('RootStore')
 @observer
@@ -22,6 +23,13 @@ class Valuation extends React.Component {
     const injuries = this.props.RootStore.ValuationStore.valuationObj.injuries;
     const injuryValues = injuries.map(a => a.injuryValue);
     const totalInjuryValue = injuryValues.reduce((accumulator, currentValue) => accumulator + currentValue);
+    /*
+    console.log(this.props.RootStore.ValuationStore.valuationObj.financialDetails);
+    const totalFinancialLosses = this.props.RootStore.ValuationStore.valuationObj.financialDetails.reduce(
+      (accumulator, currentValue) => accumulator + currentValue
+    );
+    console.log(totalFinancialLosses);*/
+
     const totalClaimValue = fTravel + fTreatment + fEarnings + fMedication + fRepairs + fOther + totalInjuryValue;
 
     return (
@@ -29,18 +37,14 @@ class Valuation extends React.Component {
         <Header>Here is your valuation</Header>
         <P>
           <strong>SUMMARY</strong>
-        </P>
-        <P>
-          The overall value of your claim is in the region of <strong>£{totalClaimValue}</strong>. This is made from the
-          value of your injury and your financial losses. Valuing a case is not an exact science and (were the case to
-          go to trial) a different judge might award a different amount.
+          <br />
+          The overall value of your claim is made from the value of your injury and your financial losses. Valuing a
+          case is not an exact science and (were the case to go to trial) a different judge might award a different
+          amount.
         </P>
         <P>
           This figure is to give you a guide for what your case might be worth, from the information given and settling
           on the basis of this information is at your own risk.
-        </P>
-        <P>
-          <strong>VALUE OF INJURY</strong>
         </P>
         {answers === 'valAnsFractureForearm' && (
           <React.Fragment>
@@ -57,36 +61,51 @@ class Valuation extends React.Component {
           </React.Fragment>
         )}
 
-        <P>You suffered from the following injuries:</P>
+        <P>
+          <strong>VALUE OF INJURY</strong>
+          <br />You suffered from the following injuries:
+        </P>
         <List.UnorderedList>
           {injuries.map((item, i) => {
             return (
               <List.Item key={i}>
                 {item.injuryType} to your {item.injuryLocation.toLowerCase()} which lasted{' '}
-                {item.injuryDuration.toLowerCase()}.
+                {item.injuryDuration.toLowerCase()}.{' '}
+                {typeof item.injuryValue !== 'object' ? (
+                  `This should be worth around £${item.injuryValue}.`
+                ) : (
+                  <span>
+                    Depending on a number of factors the value of this injury can vary a great deal. Please click{' '}
+                    <Popover title={item.injuryValue.title} body={item.injuryValue.body} /> for more information.
+                  </span>
+                )}
               </List.Item>
             );
           })}
         </List.UnorderedList>
-        <P>Your injury is worth around £{totalInjuryValue}.</P>
-        <P>
-          <ins>Financial Losses</ins>
-        </P>
+        {/*<P>Your injury is worth around £{totalInjuryValue}.</P>*/}
+
         {fTreatment + fEarnings + fMedication + fRepairs + fOther === 0 ? (
           <React.Fragment>
-            <P>You indicated that you had no financial losses:</P>
+            <P>
+              <strong>FINANCIAL LOSSES</strong>
+              <br />You indicated that you had no financial losses:
+            </P>
           </React.Fragment>
         ) : (
           <React.Fragment>
-            <P>You indicated that you have the following financial losses:</P>
-            <List.OrderedList>
-              {fTravel && <List.Item>Travel - £{fTravel}</List.Item>}
-              {fTreatment && <List.Item>Treatment - £{fTreatment}</List.Item>}
-              {fEarnings && <List.Item>Lost earnings - £{fEarnings}</List.Item>}
-              {fMedication && <List.Item>Medical expenses - £{fMedication}</List.Item>}
-              {fRepairs && <List.Item>Damage to property - £{fRepairs}</List.Item>}
-              {fOther && <List.Item>Other - £{fOther}</List.Item>}
-            </List.OrderedList>
+            <P>
+              <strong>Financial Losses</strong>
+              <br />You indicated that you have the following financial losses:
+            </P>
+            <List.UnorderedList>
+              {fTravel > 0 && <List.Item>Travel - £{fTravel}</List.Item>}
+              {fTreatment > 0 && <List.Item>Treatment - £{fTreatment}</List.Item>}
+              {fEarnings > 0 && <List.Item>Lost earnings - £{fEarnings}</List.Item>}
+              {fMedication > 0 && <List.Item>Medical expenses - £{fMedication}</List.Item>}
+              {fRepairs > 0 && <List.Item>Damage to property - £{fRepairs}</List.Item>}
+              {fOther > 0 && <List.Item>Other - £{fOther}</List.Item>}
+            </List.UnorderedList>
           </React.Fragment>
         )}
       </React.Fragment>

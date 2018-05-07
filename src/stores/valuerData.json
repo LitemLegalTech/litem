@@ -1,7 +1,12 @@
 {
-  "soft": {
-    "neck": {
-      "txt": "a soft tissue injury to your neck",
+  "Soft tissue injury": {
+    "Brain injury / concussion": {
+      "popover": {
+        "title": "Brain injury / concussion",
+        "body": "Brain injury / concussion body"
+      }
+    },
+    "Neck": {
       "1wk": 600,
       "2wks": 800,
       "3wks": 1000,
@@ -14,8 +19,7 @@
       "104wks": 6920,
       "longer": 99999
     },
-    "shoulder": {
-      "txt": "a soft tissue injury to your shoulder",
+    "Shoulders": {
       "1wk": 600,
       "2wks": 800,
       "3wks": 1000,
@@ -28,8 +32,7 @@
       "104wks": 6920,
       "longer": 99999
     },
-    "back": {
-      "txt": "a soft tissue injury to your back",
+    "Back": {
       "1wk": 600,
       "2wks": 800,
       "3wks": 1000,
@@ -42,8 +45,7 @@
       "104wks": 6920,
       "longer": 99999
     },
-    "pelvis": {
-      "txt": "a soft tissue injury to your pelvis",
+    "Pelvis / hips": {
       "1wk": 600,
       "2wks": 800,
       "3wks": 1000,
@@ -56,8 +58,7 @@
       "104wks": 6920,
       "longer": 99999
     },
-    "hand": {
-      "txt": "a soft tissue injury to your hand",
+    "Hand": {
       "1wk": 600,
       "2wks": 800,
       "3wks": 1000,
@@ -70,8 +71,7 @@
       "104wks": 5000,
       "longer": 99999
     },
-    "wrist": {
-      "txt": "a soft tissue injury to your wrist",
+    "Wrist": {
       "1wk": 600,
       "2wks": 800,
       "3wks": 1000,
@@ -84,8 +84,7 @@
       "104wks": 4000,
       "longer": 99999
     },
-    "elbow": {
-      "txt": "a soft tissue injury to your elbow",
+    "Elbow": {
       "1wk": 600,
       "2wks": 800,
       "3wks": 1000,
@@ -98,8 +97,7 @@
       "104wks": 4000,
       "longer": 99999
     },
-    "knee": {
-      "txt": "a soft tissue injury to your knee",
+    "Knee": {
       "1wk": 600,
       "2wks": 800,
       "3wks": 1000,
@@ -112,8 +110,7 @@
       "104wks": 5000,
       "longer": 99999
     },
-    "foot": {
-      "txt": "a soft tissue injury to your foot",
+    "Foot": {
       "1wk": 600,
       "2wks": 800,
       "3wks": 1000,
@@ -126,8 +123,7 @@
       "104wks": 4900,
       "longer": 99999
     },
-    "ankle": {
-      "txt": "a soft tissue injury to your ankle",
+    "Ankle": {
       "1wk": 600,
       "2wks": 800,
       "3wks": 1000,
@@ -139,11 +135,70 @@
       "76wks": 4820,
       "104wks": 6000,
       "longer": 99999
+    },
+    "Leg": {
+      "popover": {
+        "title": "Leg injury",
+        "body": "Leg injury"
+      }
+    },
+    "Internal Organs": {
+      "popover": {
+        "title": "Internal Organ injury",
+        "body": "Internal Organ injury"
+      }
     }
   },
-  "fracture": {
-    "elbow": {
-      "txt": "a fractured elbow",
+  "Fracture": {
+    "Head (other than nose)": {
+      "popover": {
+        "title": "Head fracture",
+        "body": "Head fracture"
+      }
+    },
+    "Nose": {
+      "popover": {
+        "title": "Broken Nose",
+        "body": "Broken Nose"
+      }
+    },
+    "Collar bone": {
+      "popover": {
+        "title": "Broken Collar bone",
+        "body": "Broken Collar bone"
+      }
+    },
+    "Neck": {
+      "popover": {
+        "title": "Broken neck",
+        "body": "Broken neck"
+      }
+    },
+    "Humerus": {
+      "popover": {
+        "title": "Broken humerus",
+        "body": "Broken humerus"
+      }
+    },
+    "Spine": {
+      "popover": {
+        "title": "Broken Spine",
+        "body": "Broken spine"
+      }
+    },
+    "Pelvis / hips": {
+      "popover": {
+        "title": "Broken Pelvis / hips",
+        "body": "Broken Pelvis / hips"
+      }
+    },
+    "Arm": {
+      "popover": {
+        "title": "Broken Arm",
+        "body": "Broken Arm"
+      }
+    },
+    "Wrist": {
       "1wk": 600,
       "2wks": 800,
       "3wks": 1000,
@@ -156,8 +211,7 @@
       "104wks": 4000,
       "longer": 99999
     },
-    "wrist": {
-      "txt": "a fractured wrist",
+    "Elbow": {
       "1wk": 600,
       "2wks": 800,
       "3wks": 1000,
@@ -170,8 +224,7 @@
       "104wks": 4000,
       "longer": 99999
     },
-    "thumb": {
-      "txt": "a fractured thumb",
+    "Finger": {
       "1wk": 600,
       "2wks": 800,
       "3wks": 1000,
@@ -184,8 +237,7 @@
       "104wks": 4000,
       "longer": 99999
     },
-    "finger": {
-      "txt": "a fractured finger",
+    "Thumb": {
       "1wk": 600,
       "2wks": 800,
       "3wks": 1000,
@@ -198,8 +250,7 @@
       "104wks": 4000,
       "longer": 99999
     },
-    "thigh": {
-      "txt": "a fractured thigh",
+    "Thigh": {
       "1wk": 600,
       "2wks": 800,
       "3wks": 1000,
@@ -212,8 +263,7 @@
       "104wks": 4000,
       "longer": 99999
     },
-    "knee": {
-      "txt": "a fractured knee",
+    "Knee": {
       "1wk": 600,
       "2wks": 800,
       "3wks": 1000,
@@ -226,8 +276,7 @@
       "104wks": 4000,
       "longer": 99999
     },
-    "ankle": {
-      "txt": "a fractured ankle",
+    "Ankle": {
       "1wk": 600,
       "2wks": 800,
       "3wks": 1000,
@@ -240,8 +289,7 @@
       "104wks": 4000,
       "longer": 99999
     },
-    "toe": {
-      "txt": "a fractured toe",
+    "Toe": {
       "1wk": 600,
       "2wks": 800,
       "3wks": 1000,
@@ -253,6 +301,56 @@
       "76wks": 3500,
       "104wks": 4000,
       "longer": 99999
+    },
+    "None of the above": {
+      "popover": {
+        "title": "None of the above",
+        "body": "None of the above"
+      }
+    }
+  },
+  "Burn / laceration / scarring": {
+    "Face": {
+      "popover": {
+        "title": "Facial burn or scarring",
+        "body": "Facial burn or scarring"
+      }
+    },
+    "Other": {
+      "popover": {
+        "title": "Other burn or scarring",
+        "body": "Other burn or scarring"
+      }
+    }
+  },
+  "Psychiatric": {
+    "Travel Anxiety": {
+      "popover": {
+        "title": "Travel anxiety",
+        "body": "Travel anxiety"
+      }
+    },
+    "Other": {
+      "popover": {
+        "title": "Other Psychiatric",
+        "body": "Other Psychiatric"
+      }
+    }
+  },
+  "Damage to Teeth": {
+    "": {
+      "popover": {
+        "title": "Damage to Teeth",
+        "body": "Damage to Teeth"
+      }
+    }
+  },
+  "None of the above": {
+    "": {
+      "popover": {
+        "title": "None of the above",
+        "body": "None of the above"
+      }
     }
   }
 }

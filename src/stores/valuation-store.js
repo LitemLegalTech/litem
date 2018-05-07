@@ -72,52 +72,11 @@ export default class mobxSessionStore {
 
   @computed
   get injuryValue() {
-    let injuryType;
-    switch (this.valuationObj.injuryType) {
-      case 'Soft tissue / ligament / bruising':
-        injuryType = 'soft';
-        break;
-      case 'Fracture':
-        injuryType = 'fracture';
-        break;
-      default:
-        break;
-    }
-    let injuryLocation;
-    switch (this.valuationObj.injuryLocation) {
-      case 'Neck':
-        injuryLocation = 'neck';
-        break;
-      case 'Shoulders':
-        injuryLocation = 'shoulder';
-        break;
-      case 'Back':
-        injuryLocation = 'back';
-        break;
-      case 'Pelvis / hips':
-        injuryLocation = 'pelvis';
-        break;
-      case 'Hand':
-        injuryLocation = 'hand';
-        break;
-      case 'Wrist':
-        injuryLocation = 'wrist';
-        break;
-      case 'Elbow':
-        injuryLocation = 'elbow';
-        break;
-      case 'Knee':
-        injuryLocation = 'knee';
-        break;
-      case 'Foot':
-        injuryLocation = 'foot';
-        break;
-      case 'Ankle':
-        injuryLocation = 'ankle';
-        break;
-      default:
-        break;
-    }
+    const injuryType = this.valuationObj.injuryType;
+    const injuryLocation =
+      this.valuationObj.injuryType === 'Damage to Teeth' || this.valuationObj.injuryType === 'None of the above'
+        ? ''
+        : this.valuationObj.injuryLocation;
     let injuryDuration;
     switch (this.valuationObj.injuryDuration) {
       case 'between a day and a week':
@@ -155,6 +114,9 @@ export default class mobxSessionStore {
         break;
       default:
         break;
+    }
+    if (valuationTable[injuryType][injuryLocation][injuryDuration] === undefined) {
+      injuryDuration = 'popover';
     }
     const val = valuationTable[injuryType][injuryLocation][injuryDuration];
     return val;

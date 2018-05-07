@@ -86,8 +86,11 @@ export const CustomBottomButton = styled(Button)`
 `;
 
 export const BtnPop = styled.div`
+  ${props =>
+    props.questionMark
+      ? `
   position: relative;
-  top: -10px;
+  top: -0.7em;
   line-height: 0.9rem;
   display: inline-block;
   &:after {
@@ -102,5 +105,12 @@ export const BtnPop = styled.div`
     height: 0.9rem;
     font-size: 0.9rem;
     cursor: pointer;
-  }
+  }`
+      : `display: inline-block;
+      &:after {
+        content: 'here';
+        display: inline-block;
+        color: #3cc;
+        cursor: pointer;
+    }`};
 `;

@@ -2,141 +2,81 @@ const data = {
   injuryType: {
     id: 'injuryType',
     title: 'What type of injury did you have?',
-    popover: {
-      title: 'One injury at a time!',
-      body: "Don't worry, you can add more injuries later."
-    },
     body: [],
     placeholder: 'Choose the type of injury',
     type: 'Dropdown',
     answers: [
       {
         id: 'tSoft',
-        label: 'Soft tissue / ligament / bruising',
-        popover: {
-          title: 'Soft tissue injuries can be hard!',
-          body: 'This could include cuts and bruises, and ligament damage.'
-        },
+        label: 'Soft tissue injury',
         nxtQ: 'lSoft'
       },
       {
         id: 'tFracture',
         label: 'Fracture',
-        popover: {
-          title: 'Soft tissue injuries can be hard!',
-          body: 'This could include cuts and bruises, and ligament damage.'
-        },
         nxtQ: 'lFracture'
       },
       {
         id: 'tBurn',
         label: 'Burn / laceration / scarring',
-        popover: {
-          title: 'Soft tissue injuries can be hard!',
-          body: 'This could include cuts and bruises, and ligament damage.'
-        },
         nxtQ: 'lBurn'
       },
       {
         id: 'tPsych',
         label: 'Psychiatric',
-        popover: {
-          title: 'Soft tissue injuries can be hard!',
-          body: 'This could include cuts and bruises, and ligament damage.'
-        },
         nxtQ: 'lPsych'
       },
       {
         id: 'tDental',
         label: 'Damage to Teeth',
-        popover: {
-          title: 'Soft tissue injuries can be hard!',
-          body: 'This could include cuts and bruises, and ligament damage.'
-        },
         nxtQ: 'duration'
       },
       {
         id: 'tNone',
         label: 'None of the above',
-        popover: {
-          title: 'Soft tissue injuries can be hard!',
-          body: 'This could include cuts and bruises, and ligament damage.'
-        },
-        nxtQ: 'contactMe'
+        nxtQ: 'duration'
       }
     ]
   },
   lSoft: {
     id: 'lSoft',
     title: 'Where was the injury located?',
-    popover: {
-      title: 'Soft tissue injuries can be hard!',
-      body: 'This could include cuts and bruises, and ligament damage.'
-    },
     type: 'Dropdown',
     answers: [
       {
         id: 'lSoftBrain',
         label: 'Brain injury / concussion',
-        popover: {
-          title: 'Soft tissue injuries can be hard!',
-          body: 'This could include cuts and bruises, and ligament damage.'
-        },
-        nxtQ: 'contactMe'
+        nxtQ: 'duration'
       },
       {
         id: 'lSoftNeck',
         label: 'Neck',
-        popover: {
-          title: 'Soft tissue injuries can be hard!',
-          body: 'This could include cuts and bruises, and ligament damage.'
-        },
         nxtQ: 'duration'
       },
       {
         id: 'lSoftShoulders',
         label: 'Shoulders',
-        popover: {
-          title: 'Soft tissue injuries can be hard!',
-          body: 'This could include cuts and bruises, and ligament damage.'
-        },
         nxtQ: 'duration'
       },
       {
         id: 'lSoftBack',
         label: 'Back',
-        popover: {
-          title: 'Soft tissue injuries can be hard!',
-          body: 'This could include cuts and bruises, and ligament damage.'
-        },
         nxtQ: 'duration'
       },
       {
         id: 'lSoftPelvis',
         label: 'Pelvis / hips',
-        popover: {
-          title: 'Soft tissue injuries can be hard!',
-          body: 'This could include cuts and bruises, and ligament damage.'
-        },
         nxtQ: 'duration'
       },
       {
         id: 'lSoftLimb',
         label: 'Arm, leg, hand or foot area',
-        popover: {
-          title: 'Soft tissue injuries can be hard!',
-          body: 'This could include cuts and bruises, and ligament damage.'
-        },
         nxtQ: 'lSoftLimbDets'
       },
       {
         id: 'softOrgans',
         label: 'Internal Organs',
-        popover: {
-          title: 'Soft tissue injuries can be hard!',
-          body: 'This could include cuts and bruises, and ligament damage.'
-        },
-        nxtQ: 'contactMe'
+        nxtQ: 'duration'
       }
     ]
   },
@@ -198,14 +138,14 @@ const data = {
         nxtQ: 'duration'
       },
       {
-        id: 'lFractureClavicle',
-        label: 'Clavicle',
+        id: 'lFractureCollarBone',
+        label: 'Collar bone',
         nxtQ: 'duration'
       },
       {
         id: 'lFractureNeck',
         label: 'Neck',
-        nxtQ: 'contactMe'
+        nxtQ: 'duration'
       },
       {
         id: 'lFractureHumerus',
@@ -213,14 +153,14 @@ const data = {
         nxtQ: 'duration'
       },
       {
-        id: 'lFractureBack',
-        label: 'Back',
-        nxtQ: 'contactMe'
+        id: 'lFractureSpine',
+        label: 'Spine',
+        nxtQ: 'duration'
       },
       {
         id: 'lFracturePelvis',
         label: 'Pelvis / Hips',
-        nxtQ: 'contactMe'
+        nxtQ: 'duration'
       },
       {
         id: 'lFractureLimb',
@@ -230,7 +170,7 @@ const data = {
       {
         id: 'lNone',
         label: 'None of the above',
-        nxtQ: 'contactMe'
+        nxtQ: 'duration'
       }
     ]
   },
@@ -266,12 +206,12 @@ const data = {
       },
       {
         id: 'lFractureThigh',
-        label: 'Leg',
+        label: 'Thigh',
         nxtQ: 'duration'
       },
       {
         id: 'lFractureKnee',
-        label: 'Foot',
+        label: 'Knee',
         nxtQ: 'duration'
       },
       {
@@ -293,7 +233,7 @@ const data = {
     answers: [
       {
         id: 'lBurnFace',
-        label: 'face',
+        label: 'Face',
         nxtQ: 'duration'
       },
       {
