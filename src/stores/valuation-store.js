@@ -74,7 +74,9 @@ export default class mobxSessionStore {
   get injuryValue() {
     const injuryType = this.valuationObj.injuryType;
     const injuryLocation =
-      this.valuationObj.injuryType === 'Damage to Teeth' || this.valuationObj.injuryType === 'None of the above'
+      this.valuationObj.injuryType === 'Damage to Teeth' ||
+      this.valuationObj.injuryType === 'Brain injury' ||
+      this.valuationObj.injuryType === 'Spinal chord injury'
         ? ''
         : this.valuationObj.injuryLocation;
     let injuryDuration;
@@ -110,7 +112,7 @@ export default class mobxSessionStore {
         injuryDuration = '104wks';
         break;
       case 'more than 2 years':
-        injuryDuration = 'longer';
+        injuryDuration = 'popover';
         break;
       default:
         break;

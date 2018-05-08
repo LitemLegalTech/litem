@@ -1,11 +1,5 @@
 {
   "Soft tissue injury": {
-    "Brain injury / concussion": {
-      "popover": {
-        "title": "Brain injury / concussion",
-        "body": "Brain injury / concussion body"
-      }
-    },
     "Neck": {
       "1wk": 600,
       "2wks": 800,
@@ -17,7 +11,11 @@
       "52wks": 3810,
       "76wks": 5365,
       "104wks": 6920,
-      "longer": 99999
+      "popover": {
+        "title": "Soft Tissue Injury to the Neck",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College guidelines, which the courts use to assess the value of an injury.</strong></P><P>Injuries causing fractures or dislocations or severe damage to soft tissues and/or ruptured tendons that lead to chronic conditions and significant disability of a permanent nature. The precise award depends on the length of time during which the most serious symptoms are ameliorated, the extent of the treatment required and on the prognosis.</P><P>£39,870 to £49,090</P><P>Moderate</P><P>Injuries such as fractures or dislocations which cause severe immediate symptoms and which may necessitate spinal fusion. This bracket will also include chronic conditions, usually involving referred symptoms to other parts of the anatomy or serious soft tissue injuries to the neck and back combined. They leave markedly impaired function or vulnerability to further trauma, and limitation of activities. Depending on severity of injury this bracket can include cases where there are pre-existing degenerative changes or where symptoms have been accelerated.</P><P>£21,910 to £33,750</P><P>Cases involving soft tissue or wrenching-type injury and disc lesion of the more severe type resulting in cervical spondylosis, serious limitation of movement, permanent or recurring pain, stiffness or discomfort and the possible need for further surgery or increased vulnerability to further trauma. This bracket will also include injuries which may have accelerated and/or exacerbated a pre-existing condition over a prolonged period of time, usually by five years or more.</P><P>£12,050 to £21,910</P><P>Injuries which may have accelerated and/or exacerbated a pre-existing condition over a shorter period of time, usually less than five years. This bracket will also apply to moderate soft tissue injuries where the period of recovery has been fairly protracted and where there remains an increased vulnerability to further trauma or permanent nuisance type symptoms referring from the neck.</P><P>£6,920 to £12,050</P>"
+      }
     },
     "Shoulders": {
       "1wk": 600,
@@ -30,7 +28,11 @@
       "52wks": 3810,
       "76wks": 5365,
       "104wks": 6920,
-      "longer": 99999
+      "popover": {
+        "title": "Soft Tissue Injury to the Shoulder",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College guidelines, which the courts use to assess the value of an injury.</strong></P><P>Severe</P><P>Often associated with neck injuries and involving damage to the brachial plexus resulting in significant disability. Serious brachial plexus injuries causing significant neck and/or arm symptoms should be assessed seperately.</P><P>£16,830 to £42,110</P><P>Serious</P><P>Dislocation of the shoulder and damage to the lower part of the brachial plexus causing pain in shoulder and neck, aching in elbow, sensory symptoms in the forearm and hand, and weakness of grip or a fractured humerus leading to restricted shoulder movement. Cases of rotator cuff injury with persisting symptoms after surgery will usually fall within this bracket, as will cases of soft tissue injury where intrusive symptoms will be permanent.</P><P>£11,200 to £16,830</P><P>Moderate</P><P>Frozen shoulder with limitation of movement and discomfort with symptoms persisting for about two years. Also soft tissue injuries with more than minimal symptoms persisting after two years but not permanent.</P><P>£6,920 to £11,200</P><P>Minor</P><P>Soft tissue injury to shoulder with considerable pain but almost complete recovery:</P><P>The starting point for the assessment will be the duration of symptoms but the severity of the original injury, the degree of pain experienced and the extent to which ongoing symptoms are of a minor nature only may justify an award in a higher or lower bracket.</P>"
+      }
     },
     "Back": {
       "1wk": 600,
@@ -43,7 +45,11 @@
       "52wks": 3810,
       "76wks": 5365,
       "104wks": 6920,
-      "longer": 99999
+      "popover": {
+        "title": "Soft Tissue Injury to the Back",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College guidelines, which the courts use to assess the value of an injury.</strong></P><P>Severe</P><P>Cases of the most severe injury involving damage to the spinal cord and nerve roots, leading to a combination of very serious consequences not normally found in cases of back injury. There will be severe pain and disability with a combination of incomplete paralysis and significantly impaired bladder, bowel and sexual function.</P><P>£79,890 to £141,150</P><P>Cases which have special features taking them outside any lower bracket applicable to orthopaedic injury to the back. Such features include nerve root damage with associated loss of sensation, impaired mobility, impaired bladder and bowel function, sexual difficulties and unsightly scarring.</P><P>£65,030 to £77,540</P><P>Cases of disc lesions or fractures of discs or of vertebral bodies or soft tissue injuries leading to chronic conditions where, despite treatment (usually involving surgery), there remain disabilities such as continuing severe pain and discomfort, impaired agility, impaired sexual function, depression, personality change, alcoholism, unemployability and the risk of arthritis.</P><P>£34,000 to £61,140</P><P>Moderate</P><P>The bracket contains a wide variety of injuries. Examples are a case of a compression/crush fracture of the lumbar vertebrae where there is a substantial risk of osteoarthritis and constant pain and discomfort; that of a traumatic spondylolisthesis with continuous pain and a probability that spinal fusion will be necessary; a prolapsed intervertebral disc requiring surgery or damage to an intervertebral disc with nerve root irritation and reduced mobility.</P><P>£24,340 to £34,000</P><P>Many frequently encountered injuries to the back such as disturbance of ligaments and muscles giving rise to backache, soft tissue injuries resulting in a prolonged acceleration and/or exacerbation of a pre-existing back condition, usually by five years or more, or prolapsed discs necessitating laminectomy or resulting in repeated relapses. The precise figure will depend upon a number of factors including the severity of the original injury, the degree of pain experienced, the extent of any treatment required in the past or in the future, the impact of the symptoms on the injured person’s ability to function in everyday life and engage in social/recreational activities and the prognosis for the future.</P><P>Minor</P><P>This bracket includes less serious strains, sprains, disc prolapses and soft tissue injuries. </P><P>£10,970 to £24,340</P><P>Where a full recovery or a recovery to nuisance level takes place without surgery within about two to five years. This bracket will also apply to shorter term acceleration and/or exacerbation injuries, usually between two to five years.</P><P>£6,920 to £10,970</P>"
+      }
     },
     "Pelvis / hips": {
       "1wk": 600,
@@ -56,7 +62,11 @@
       "52wks": 3460,
       "76wks": 5190,
       "104wks": 6920,
-      "longer": 99999
+      "popover": {
+        "title": "Soft Tissue Injury to the Pelvis",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College guidelines, which the courts use to assess the value of an injury.</strong></P><P>Moderate</P><P>Significant injury to the pelvis or hip but any permanent disability is not major and any future risk not great.</P><P>£23,310 to £34,340</P><P>These cases may involve hip replacement or other surgery. Where it has been carried out wholly successfully the award will tend to the top of the bracket, but the bracket also includes cases where hip replacement may be necessary in the foreseeable future or where there are more than minimal ongoing symptoms.</P>£11,040 to £23,310</P><P>Lesser Injuries</P><P>Cases where despite significant injury there is little or no residual disability. Where there has been a complete recovery within two years, the award may but is unlikely to exceed the mid-point in the range.</P><P>£3,460 to £11,040</P>"
+      }
     },
     "Hand": {
       "1wk": 600,
@@ -69,7 +79,11 @@
       "52wks": 4000,
       "76wks": 4400,
       "104wks": 5000,
-      "longer": 99999
+      "popover": {
+        "title": "Soft Tissue Injury to the Hand",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College guidelines, which the courts use to assess the value of an injury.</strong></P><P>Less Serious Hand Injury</P><P>Such as a severe crush injury resulting in significantly impaired function without future surgery or despite operative treatment undergone.</P><P>£12,670 to £25,430</P><P>Moderate Hand Injury</P><P>Crush injuries, penetrating wounds, soft tissue type and deep lacerations. The top of the bracket would be appropriate where surgery has failed and permanent disability remains. The bottom of the bracket would be appropriate for permanent but non-intrusive symptoms.</P><P>£5,110 to £11,640</P>"
+      }
     },
     "Wrist": {
       "1wk": 600,
@@ -82,7 +96,11 @@
       "52wks": 3090,
       "76wks": 3500,
       "104wks": 4000,
-      "longer": 99999
+      "popover": {
+        "title": "Soft Tissue Injury to the Wrist",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College guidelines, which the courts use to assess the value of an injury.</strong></P><P>Injuries resulting in complete loss of function in the wrist for example, where an arthrodesis has been performed.</P><P>£41,760 to £52,490</P><P>Injury resulting in significant permanent disability, but where some useful movement remains.</P><P>£21,480 to £34,340</P><P>Less severe injuries where these still result in some permanent disability as, for example, a degree of persisting pain and stiffness.</P><P>£11,040 to £21,480</P><P>Where recovery from fracture or soft tissue injury takes longer but is complete, the award will rarely exceed £8,970</P><P>Very minor undisplaced or minimally displaced fractures and soft tissue injuries necessitating application of plaster or bandage for a matter of weeks and a full or virtual recovery within up to 12 months or so.</P><P>£3,090 to £4,160</P>"
+      }
     },
     "Elbow": {
       "1wk": 600,
@@ -95,7 +113,11 @@
       "52wks": 3090,
       "76wks": 3500,
       "104wks": 4000,
-      "longer": 99999
+      "popover": {
+        "title": "Soft Tissue Injury to the Elbow",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College</strong></P><P>A Severely Disabling Injury</P><P>£34,340 to £48,080</P><P>Less Severe Injuries causing impairment of function but not involving major surgery or significant disability.</P><P>£13,720 to £28,060.</P><P>Moderate or Minor Injury</P><P>Most elbow injuries fall into this category. They comprise simple fractures, tennis elbow syndrome and lacerations; i.e. those injuries which cause no permanent damage and do not result in any permanent impairment of function.</P><P>Injuries fully resolving after about one year will usually attract an award in the region of £3,090.</P><P>Injuries with the majority of symptoms resolving within 18 to 24 months but with nuisance level symptoms persisting after that would attract an award of £5,500.</P><P>Injuries recovering after three years with nuisance symptoms thereafter and/or requiring surgery will attract awards towards the top of the bracket.</P><P>Up to £11,040</P>"
+      }
     },
     "Knee": {
       "1wk": 600,
@@ -108,7 +130,11 @@
       "52wks": 4000,
       "76wks": 4400,
       "104wks": 5000,
-      "longer": 99999
+      "popover": {
+        "title": "Soft Tissue Injury to the Knee",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College</strong></P><P>Serious knee injury where there has been disruption of the joint, the development of osteoarthritis, gross ligamentous damage, lengthy treatment, considerable pain and loss of function and an arthroplasty or arthrodesis has taken place or is inevitable.</P><P>£61,140 to £84,360</P><P>Leg fracture extending into the knee joint causing pain which is constant, permanent, limiting movement or impairing agility and rendering the injured person prone to osteoarthritis and at the risk of arthroplasty.</P><P>£45,700 to £61,140</P><P>Less severe injuries than those above and/or injuries which result in less severe disability. There may be continuing symptoms by way of pain and discomfort and limitation of movement or instability or deformity with the risk that degenerative changes and the need for remedial surgery may occur in the long term as a result of damage to the kneecap, ligamentous or meniscal injury or muscular wasting.</P><P>£22,960 to £38,120</P><P>Injuries involving dislocation, torn cartilage or meniscus which results in minor instability, wasting, weakness or other mild future disability. This bracket also includes injuries which accelerate symptoms from a pre-existing condition over a prolonged period of years.</P><P>£13,010 to £22,960</P><P>This bracket includes injuries similar to those above, but less serious and involving shorter periods of acceleration, and also lacerations, twisting or bruising injuries. Where there is continuous aching or discomfort, or occasional pain, the award will be towards the upper end of the bracket. Where recovery has been complete or almost complete the award is unlikely to exceed £5,250. Modest injuries that resolve within a short space of time will attract lower awards.</P><P>Up to £12,050</P>"
+      }
     },
     "Foot": {
       "1wk": 600,
@@ -121,7 +147,11 @@
       "52wks": 3500,
       "76wks": 4000,
       "104wks": 4900,
-      "longer": 99999
+      "popover": {
+        "title": "Soft Tissue Injury to the Ankle",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College</strong></P><P>Severe</P><P>Fractures of both heels or feet with a substantial restriction on mobility or considerable and permanent pain. The bracket will also include unusually severe injury to a single foot. Examples include injuries that result in severe degloving, extensive surgery, heel fusion, osteoporosis, ulceration or other disability preventing the wearing of ordinary shoes. It will also apply in the case of a drop foot deformity corrected by a brace.</P><P>£36,800 to £61,410</P><P>Serious</P><P>This bracket will include injuries less severe than above but leading to continuing pain from traumatic arthritis or the risk of future arthritis, prolonged treatment and the risk of fusion surgery.</P><P>£21,910 to £34,370</P><P>Moderate</P><P>Displaced metatarsal fractures resulting in permanent deformity and continuing symptoms. There may be a risk of long-term osteoarthritis and/or future surgery.</P><P>£12,050 to £21,910</P><P>Modest</P><P>Simple metatarsal fractures, ruptured ligaments, puncture wounds and the like. Where there are continuing symptoms, such as a permanent limp, pain or aching, awards between £6,140 and £12,050 would be appropriate. Straightforward foot injuries such as fractures, lacerations, contusions etc. from which complete or near complete recovery is made would justify awards of £6,140 or less. Modest injuries that resolve within a short space of time will attract lower awards. Awards for minor foot injuries resolving within a few months, with little impact on lifestyle or day to day activities, are unlikely to exceed £2,150.</P><P>Up to £12,050</P>"
+      }
     },
     "Ankle": {
       "1wk": 600,
@@ -134,68 +164,61 @@
       "52wks": 4000,
       "76wks": 4820,
       "104wks": 6000,
-      "longer": 99999
+      "popover": {
+        "title": "Soft Tissue Injury to the Ankle",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College</strong></P><P>Examples of injuries falling within this bracket are limited and unusual. They include cases of a transmalleolar fracture of the ankle with extensive soft-tissue damage resulting in deformity and the risk that any future injury to the leg might necessitate a below-knee amputation, or cases of bilateral ankle fractures causing degeneration of the joints at a young age so that arthrodesis is necessary.</P><P>£43,900 to £61,110</P><P>Injuries necessitating an extensive period of treatment and/or a lengthy period in plaster or where pins and plates have been inserted and there is significant residual disability in the form of ankle instability and severely limited ability to walk. The level of the award within the bracket will be determined in part by such features as a failed arthrodesis, the presence of or risk of osteoarthritis, regular sleep disturbance, unsightly scarring, impact on employment and any need to wear special footwear.</P><P>£27,450 to £43,900</P><P>Fractures, ligamentous tears and the like which give rise to less serious disabilities such as difficulty in walking on uneven ground, difficulty standing or walking for long periods of time, awkwardness on stairs, irritation from metal plates and residual scarring There may also be a risk of future osteoarthritis.</P><P>£12,050 to £23,310</P><p>The less serious, minor or undisplaced fractures, sprains and ligamentous injuries. The level of the award within the bracket will be determined by whether or not a complete recovery has been made and, if recovery is incomplete, whether there is any tendency for the ankle to give way, and whether there is scarring, aching or discomfort, loss of movement or the possibility of long term osteoarthritis. Where recovery is complete without any ongoing symptoms or scarring, the award is unlikely to exceed £6,130. Where recovery is complete within a year, the award is unlikely to exceed £4,820. Modest injuries that resolve within a short space of time will attract lower awards.</P><P>Up to £12,050</P>"
+      }
     },
     "Leg": {
       "popover": {
-        "title": "Leg injury",
-        "body": "Leg injury"
-      }
-    },
-    "Internal Organs": {
-      "popover": {
-        "title": "Internal Organ injury",
-        "body": "Internal Organ injury"
+        "title": "Soft Tissue Injury to the Leg",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College guidelines, which the courts use to assess the value of an injury.</strong></P><P>Serious</P><P>Serious compound or comminuted fractures or injuries to joints or ligaments resulting in instability, prolonged treatment, a lengthy period of non-weight-bearing, the near certainty that arthritis will ensue; extensive scarring. To justify an award within this bracket a combination of such features will generally be necessary.</P><P>£34,370 to £48,080</P><P>Moderate</P><P>This bracket includes complicated or multiple fractures or severe crushing injuries, generally to a single limb. The level of an award within the bracket will be influenced by the extent of treatment undertaken; impact on employment; the presence or risk of degenerative changes and/or future surgery; imperfect union of fractures, muscle wasting; limited joint movements; instability in the knee; unsightly scarring or permanently increased vulnerability to future damage.</P><P>£24,340 to £34,370</P><P>Less Serious Leg Injuries</P><P>Fractures from which an Incomplete Recovery is Made or Serious Soft Tissue Injuries</P><P>In the case of fracture injuries, the injured person will have made a reasonable recovery but will be left with a metal implant and/or defective gait, a limp, impaired mobility, sensory loss, discomfort or an exacerbation of a pre-existing disability. This bracket will also involve serious soft tissue injuries to one or both legs causing significant cosmetic deficit, functional restriction and/or some nerve damage in the lower limbs.</P><P>£15,750 to £24,340</P>"
       }
     }
   },
   "Fracture": {
     "Head (other than nose)": {
       "popover": {
-        "title": "Head fracture",
-        "body": "Head fracture"
+        "title": "Facial Fractures",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College guidelines, which the courts use to assess the value of an injury.</strong></P><P>Le Fort Fractures of Frontal Facial Bones</P>£20,880 to £32,210</P>Multiple Fractures of Facial Bones - Involving some facial deformity of a permanent nature.</P>£13,080 to £21,000</P><P>Fractures of Cheekbones</P><P>Serious fractures requiring surgery but with lasting consequences such as paraesthesia in the cheeks or the lips or some element of disfigurement.</P><P>£8,940 to £13,840</P><P>Simple fracture of cheekbones for which some reconstructive surgery is necessary but from which there is a complete recovery with no or only minimal cosmetic effects.</P><P>£3,810 to £5,660</P><P>Simple fracture of cheekbone for which no surgery is required and where a complete recovery is effected.</P><P>£2,040 to £2,620</P><P>Fractures of Jaws</P><P>Very serious multiple fractures followed by prolonged treatment and permanent consequences, including severe pain, restriction in eating, paraesthesia and/or the risk of arthritis in the joints.</P><P>£26,730 to £39,940</P><P>Serious fracture with permanent consequences such as difficulty in opening the mouth or with eating or where there is paraesthesia in the area of the jaw.</P><P>£15,750 to £26,730</P><P>Simple fracture requiring immobilisation but from which recovery is complete.</P><P>£5,660 to £7,650</P>"
       }
     },
     "Nose": {
       "popover": {
         "title": "Broken Nose",
-        "body": "Broken Nose"
+        "body":
+          "<P><strong>The following is an extract from the Judicial College guidelines, which the courts use to assess the value of an injury.</strong></P><P>Serious or multiple fractures requiring a number of operations and/or resulting in permanent damage to airways and/or nerves or tear ducts and/or facial deformity.</P><P>£9,330 to £20,280</P><P>Displaced fracture where recovery complete but only after surgery.</P><P>£3,460 to £4,470</P><P>Displaced fracture requiring no more than manipulation.</P><P>£2,210 to £2,760</P><P>Simple undisplaced fracture with full recovery.</P><P>£1,500 to £2,210</P>"
       }
     },
     "Collar bone": {
       "popover": {
-        "title": "Broken Collar bone",
-        "body": "Broken Collar bone"
-      }
-    },
-    "Neck": {
-      "popover": {
-        "title": "Broken neck",
-        "body": "Broken neck"
+        "title": "Broken Collar Bone",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College guidelines, which the courts use to assess the value of an injury.</strong></P><P>The level of the award will depend on extent of fracture, level of disability, residual symptoms, and whether temporary or permanent, and whether union is anatomically displaced. Unusually serious cases may exceed this bracket.</P><P>£4,520 to £10,730</P>"
       }
     },
     "Humerus": {
       "popover": {
-        "title": "Broken humerus",
-        "body": "Broken humerus"
-      }
-    },
-    "Spine": {
-      "popover": {
-        "title": "Broken Spine",
-        "body": "Broken spine"
+        "title": "Broken Humerus",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College guidelines, which the courts use to assess the value of an injury.</strong></P><P>A fractured humerus leading to restricted shoulder movement.</P><P>£11,200 to £16,830</P>"
       }
     },
     "Pelvis / hips": {
       "popover": {
-        "title": "Broken Pelvis / hips",
-        "body": "Broken Pelvis / hips"
+        "title": "Broken Pelvis",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College guidelines, which the courts use to assess the value of an injury.</strong></P><P>Severe - Extensive fractures of the pelvis involving, for example, dislocation of a low back joint and a ruptured bladder, or a hip injury resulting in spondylolisthesis of a low back joint with intolerable pain and necessitating spinal fusion. Inevitably there will be substantial residual disabilities such as a complicated arthrodesis with resulting lack of bladder and bowel control, sexual dysfunction or hip deformity making the use of a calliper essential; or may present difficulties for natural delivery.</P><P>£68,740 to £114,810</P><P>Injuries only a little less severe than above but with particular distinguishing features lifting them above any lower bracket. Examples are: (a) fracture dislocation of the pelvis involving both ischial and pubic rami and resulting in impotence; or (b) traumatic myositis ossificans with formation of ectopic bone around the hip.</P><P>£54,280 to £68,740</P><P>Many injuries fall within this bracket: a fracture of the acetabulum leading to degenerative changes and leg instability requiring an osteotomy and the likelihood of hip replacement surgery in the future; the fracture of an arthritic femur or hip necessitating hip replacement; or a fracture resulting in a hip replacement which is only partially successful so that there is a clear risk of the need for revision surgery.</P><P>£34,340 to £46,040</P><P>Moderate</P><P>Significant injury to the pelvis or hip but any permanent disability is not major and any future risk not great.</P><P>£23,310 to £34,340</P><P>These cases may involve hip replacement or other surgery. Where it has been carried out wholly successfully the award will tend to the top of the bracket, but the bracket also includes cases where hip replacement may be necessary in the foreseeable future or where there are more than minimal ongoing symptoms.</P>£11,040 to £23,310</P><P>Lesser Injuries</P><P>Cases where despite significant injury there is little or no residual disability. Where there has been a complete recovery within two years, the award may but is unlikely to exceed the mid-point in the range.</P><P>£3,460 to £11,040</P><P>Minor soft tissue injuries with complete recovery</P><P>Up to £3,460</P>"
       }
     },
     "Arm": {
       "popover": {
         "title": "Broken Arm",
-        "body": "Broken Arm"
+        "body":
+          "<P><strong>The following is an extract from the Judicial College guidelines, which the courts use to assess the value of an injury.</strong></P><P>Severe Injuries</P><P>Injuries which fall short of amputation but which are extremely serious and leave the injured person little better off than if the arm had been lost; for example, a serious brachial plexus injury.</P><P>£84,310 to £114,810</P><P>Injuries Resulting in Permanent and Substantial Disablement</P><P>Serious fractures of one or both forearms where there is significant permanent residual disability whether functional or cosmetic.</P><P>£34,340 to £52,490</P><P>Less Severe Injury</P><P>While there will have been significant disabilities, a substantial degree of recovery will have taken place or will be expected.</P><P>£16,830 to £34,340</P><P>Simple fractures of the Forearm</P><P>£5,810 to £16,830</P>"
       }
     },
     "Wrist": {
@@ -209,7 +232,11 @@
       "52wks": 3090,
       "76wks": 3500,
       "104wks": 4000,
-      "longer": 99999
+      "popover": {
+        "title": "Broken Wrist",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College</strong></P><P>Injuries resulting in complete loss of function in the wrist for example, where an arthrodesis has been performed.</P><P>£41,760 to £52,490</P><p>Injury resulting in significant permanent disability, but where some useful movement remains.</P><P>£21,480 to £34,340</P><P>Less severe injuries where these still result in some permanent disability as, for example, a degree of persisting pain and stiffness.</P><P>£11,040 to £21,480</P><P>Where recovery from fracture or soft tissue injury takes longer but is complete, the award will rarely exceed £8,970</P><P>An uncomplicated Colles' fracture</P><P>In the region of £6,510</P><P>Very minor undisplaced or minimally displaced fractures and soft tissue injuries necessitating application of plaster or bandage for a matter of weeks and a full or virtual recovery within up to 12 months or so.</P><P>£3,090 to £4,160</P>"
+      }
     },
     "Elbow": {
       "1wk": 600,
@@ -222,7 +249,11 @@
       "52wks": 3090,
       "76wks": 3500,
       "104wks": 4000,
-      "longer": 99999
+      "popover": {
+        "title": "Broken Elbow",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College</strong></P><P>A Severely Disabling Injury</P><P>£34,340 to £48,080</P><P>Less Severe Injuries causing impairment of function but not involving major surgery or significant disability.</P><P>£13,720 to £28,060.</P><P>Moderate or Minor Injury</P><P>Most elbow injuries fall into this category. They comprise simple fractures, tennis elbow syndrome and lacerations; i.e. those injuries which cause no permanent damage and do not result in any permanent impairment of function.</P><P>Injuries fully resolving after about one year will usually attract an award in the region of £3,090.</P><P>Injuries with the majority of symptoms resolving within 18 to 24 months but with nuisance level symptoms persisting after that would attract an award of £5,500.</P><P>Injuries recovering after three years with nuisance symptoms thereafter and/or requiring surgery will attract awards towards the top of the bracket.</P><P>Up to £11,040</P>"
+      }
     },
     "Finger": {
       "1wk": 600,
@@ -235,7 +266,11 @@
       "52wks": 3090,
       "76wks": 3500,
       "104wks": 4000,
-      "longer": 99999
+      "popover": {
+        "title": "Broken finger",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College</strong></P><P>Severe Fractures to Fingers</P><P>These may lead to partial amputations and result in deformity, impairment of grip, reduced mechanical function and disturbed sensation.</P><P>Up to £32,210</P><P>Fracture of Index Finger</P><P>This level is appropriate where a fracture has mended quickly but grip has remained impaired, there is pain on heavy use and osteoarthritis is likely in due course.</P><P>£7,990 to £10,730</P><P>Serious Injury to Ring or Middle Fingers</P><P>Fractures or serious injury to tendons causing stiffness, deformity and permanent loss of grip or dexterity will fall within this bracket.</P><P>£13,080 to £14,330</P><P>Minor Finger Injuries</P><P>This will include a finger fracture where the award within the bracket will be influenced by recovery time. Also injuries such as scarring, tenderness and reaction to the cold where there is a full recovery.</P><P>Up to £4,160</P>"
+      }
     },
     "Thumb": {
       "1wk": 600,
@@ -248,7 +283,11 @@
       "52wks": 3090,
       "76wks": 3500,
       "104wks": 4000,
-      "longer": 99999
+      "popover": {
+        "title": "Broken thumb",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College</strong></P><P><ins>Very Serious Injury to Thumb</ins></P><P>This bracket is appropriate where the thumb has been severed at the base and grafted back leaving a virtually useless and deformed digit, or where the thumb has been amputated through the interphalangeal joint.</P><P>£17,190 to £30,700</P><P>Serious Injury to the Thumb</P><P>Such injuries may involve amputation of the tip, nerve damage or fracture necessitating the insertion of wires as a result of which the thumb is cold and ultra-sensitive and there is impaired grip and loss of manual dexterity.</P><P>£11,040 to £14,690 <p> <u>Moderate Injuries to the Thumb</P><P>These are injuries such as those necessitating arthrodesis of the interphalangeal joint or causing damage to tendons or nerves. Such injuries result in impairment of sensation and function and cosmetic deformity.</P><P>£8,470 to £11,040</P><P>Severe Dislocation of the Thumb</P><P>£3,460 to £5,950 <p> <u>Minor Injuries to the Thumb</P><P>Such an injury would be a fracture which has recovered in six months except for residual stiffness and some discomfort.</P><P>Up to £3,460</P><P>Trivial Thumb Injuries</P><P>These may have caused severe pain for a very short time but will have resolved within a few months.</P><P>Up to £1,930</P>"
+      }
     },
     "Thigh": {
       "1wk": 600,
@@ -261,7 +300,11 @@
       "52wks": 3090,
       "76wks": 3500,
       "104wks": 4000,
-      "longer": 99999
+      "popover": {
+        "title": "Broken thigh",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College</strong></P><P>Fractures from which an Incomplete Recovery is Made</P>The injured person will have made a reasonable recovery but will be left with a metal implant and/or defective gait, a limp, impaired mobility, sensory loss, discomfort or an exacerbation of a pre-existing disability.</P><P>£15,750 to £24,340</P><P>Simple Fracture of a Femur with No Damage to Articular Surfaces</P><P>£7,990 to £12,350</P><P>Simple Fractures to Tibia or Fibula or Soft Tissue Injuries</P>Towards the top of the bracket there will come simple fractures of the tibia or fibula where there are some ongoing minor symptoms such as dull aching and/or modest restriction of movement. Where there has been a simple fracture of the tibia or fibula with a complete recovery, an award of less than £7,990 is likely to be justified. The level of award will be influenced by time spent in plaster and the length of the recovery period.</P><P>Up to £10,380</P>"
+      }
     },
     "Knee": {
       "1wk": 600,
@@ -274,7 +317,11 @@
       "52wks": 3090,
       "76wks": 3500,
       "104wks": 4000,
-      "longer": 99999
+      "popover": {
+        "title": "Broken knee",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College</strong></P><P>Serious knee injury where there has been disruption of the joint, the development of osteoarthritis, gross ligamentous damage, lengthy treatment, considerable pain and loss of function and an arthroplasty or arthrodesis has taken place or is inevitable.</P><P>£61,140 to £84,360</P><P>Leg fracture extending into the knee joint causing pain which is constant, permanent, limiting movement or impairing agility and rendering the injured person prone to osteoarthritis and at the risk of arthroplasty.</P><P>£45,700 to £61,140</P><P>Less severe injuries than those above and/or injuries which result in less severe disability. There may be continuing symptoms by way of pain and discomfort and limitation of movement or instability or deformity with the risk that degenerative changes and the need for remedial surgery may occur in the long term as a result of damage to the kneecap, ligamentous or meniscal injury or muscular wasting.</P><P>£22,960 to £38,120</P><P>Injuries involving dislocation, torn cartilage or meniscus which results in minor instability, wasting, weakness or other mild future disability. This bracket also includes injuries which accelerate symptoms from a pre-existing condition over a prolonged period of years.</P><P>£13,010 to £22,960</P><P>This bracket includes injuries similar to those above, but less serious and involving shorter periods of acceleration, and also lacerations, twisting or bruising injuries. Where there is continuous aching or discomfort, or occasional pain, the award will be towards the upper end of the bracket. Where recovery has been complete or almost complete the award is unlikely to exceed £5,250. Modest injuries that resolve within a short space of time will attract lower awards.</P><P>Up to £12,050</P>"
+      }
     },
     "Ankle": {
       "1wk": 600,
@@ -287,7 +334,11 @@
       "52wks": 3090,
       "76wks": 3500,
       "104wks": 4000,
-      "longer": 99999
+      "popover": {
+        "title": "Broken ankle",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College</strong></P><P>Examples of injuries falling within this bracket are limited and unusual. They include cases of a transmalleolar fracture of the ankle with extensive soft-tissue damage resulting in deformity and the risk that any future injury to the leg might necessitate a below-knee amputation, or cases of bilateral ankle fractures causing degeneration of the joints at a young age so that arthrodesis is necessary.</P><P>£43,900 to £61,110</P><P>Injuries necessitating an extensive period of treatment and/or a lengthy period in plaster or where pins and plates have been inserted and there is significant residual disability in the form of ankle instability and severely limited ability to walk. The level of the award within the bracket will be determined in part by such features as a failed arthrodesis, the presence of or risk of osteoarthritis, regular sleep disturbance, unsightly scarring, impact on employment and any need to wear special footwear.</P><P>£27,450 to £43,900</P><P>Fractures, ligamentous tears and the like which give rise to less serious disabilities such as difficulty in walking on uneven ground, difficulty standing or walking for long periods of time, awkwardness on stairs, irritation from metal plates and residual scarring There may also be a risk of future osteoarthritis.</P><P>£12,050 to £23,310</P><p>The less serious, minor or undisplaced fractures, sprains and ligamentous injuries. The level of the award within the bracket will be determined by whether or not a complete recovery has been made and, if recovery is incomplete, whether there is any tendency for the ankle to give way, and whether there is scarring, aching or discomfort, loss of movement or the possibility of long term osteoarthritis. Where recovery is complete without any ongoing symptoms or scarring, the award is unlikely to exceed £6,130. Where recovery is complete within a year, the award is unlikely to exceed £4,820. Modest injuries that resolve within a short space of time will attract lower awards.</P><P>Up to £12,050</P>"
+      }
     },
     "Toe": {
       "1wk": 600,
@@ -300,40 +351,49 @@
       "52wks": 3090,
       "76wks": 3500,
       "104wks": 4000,
-      "longer": 99999
-    },
-    "None of the above": {
       "popover": {
-        "title": "None of the above",
-        "body": "None of the above"
+        "title": "Broken toe",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College</strong></P><P>This is the appropriate bracket for severe crush injuries, leading to amputation of one or two toes (other than the great toe) or falling short of the need for amputation or necessitating only partial amputation. It also includes bursting wounds and injuries resulting in severe damage and in any event producing significant continuing symptoms.</P><P>£12,050 to £18,480</P><P>Such injuries will be serious injuries to the great toe or crush and multiple fractures of two or more toes. There will be some permanent disability by way of discomfort, pain or sensitive scarring to justify an award within this bracket. Where there have been a number of unsuccessful operations or persisting stabbing pains, impaired gait or the like the award will tend towards the top end of the bracket.</P><P>£8,420 to £12,050</P><P>These injuries include relatively straightforward fractures or the exacerbation of a pre-existing degenerative condition or laceration injuries to one or more toes. Cases involving prolonged minor symptoms and/or the need for surgery resulting in prolonged discomfort and permanent scarring are likely to justify awards towards the upper end of this bracket. Only £4,900 or less would be awarded for straightforward fractures or crushing/soft tissue injuries of one or more toes with complete resolution or near complete resolution. Modest injuries that resolve within a short space of time will attract lower awards.</P><P>Up to £8,420</P>"
+      }
+    },
+    "Rib": {
+      "popover": {
+        "title": "Broken Rib",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College</strong></P><P>Fractures of ribs or soft tissue injuries causing serious pain and disability over a period of weeks only.</P><P>up to £3,150</P>"
       }
     }
   },
   "Burn / laceration / scarring": {
-    "Face": {
+    "Facial": {
       "popover": {
-        "title": "Facial burn or scarring",
-        "body": "Facial burn or scarring"
+        "title": "Facial burn, laceration or scarring",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College</strong></P><P>Very Severe Scarring</P><P>In a relatively young claimants (typically teens to early 30s) where the cosmetic effect is very disfiguring and the psychological reaction severe.</P><P>£26,120 to £85,340</P><P>Less Severe Scarring</P><P>Where the disfigurement is still substantial and where there is a significant psychological reaction.</P><P>£15,750 to £42,460</P><P>Significant Scarring</P><P>Where the worst effects have been or will be reduced by plastic surgery leaving some cosmetic disability and where the psychological reaction is not great or, having been considerable at the outset, has diminished to relatively minor proportions.</P><P>£7,990 to £26,380</P><P>Less Significant Scarring - In these cases there may be but one scar which can be camouflaged or, though there are a number of very small scars, the overall effect is to mar but not markedly to affect the appearance and the reaction is no more than that of an ordinarily sensitive young woman.</P><P>£3,460 to £12,050</P><P>Trivial Scarring - In these cases the effect is minor only.</P><P>£1,500 to £3,090</P>"
       }
     },
-    "Other": {
+    "Non-facial": {
       "popover": {
-        "title": "Other burn or scarring",
-        "body": "Other burn or scarring"
+        "title": "Non-Facial Burns, Lacerations or Scarring",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College</strong></P><P>A large proportion of awards for a number of noticeable laceration scars, or a single disfiguring scar, of leg(s) or arm(s) or hand(s) or back or chest, fall in the bracket of £6,870 to £19,930.</P><P>In cases where an exploratory laparotomy has been performed but no significant internal injury has been found, the award reflects the operation and the inevitable scar.</P><P>In the region of £7,580</P><P>A single noticeable scar, or several superficial scars, of leg(s) or arm(s) or hand(s), with some minor cosmetic deficit.</P><P>£2,080 to £6,870</P><P>As we have noted in Chapter 9, the effects of burns will normally be regarded as more serious since they tend to cause a greater degree of pain and may lead to continuing physical and psychological injury. Serious burn injuries will attract very significant awards. Where significant burns cover 40% or more of the body, awards are likely to exceed £91,910.</P>"
       }
     }
   },
   "Psychiatric": {
     "Travel Anxiety": {
       "popover": {
-        "title": "Travel anxiety",
-        "body": "Travel anxiety"
+        "title": "Psychiatric Harm",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College</strong></P><P>Severe</P><P>In these cases the injured person will have marked problems and the prognosis will be very poor.</P><P>£48,080 to £101,470</P><P>Moderately Severe</P><P>In these cases there will be significant problems but the prognosis will be much more optimistic than above. While there are awards which support both extremes of this bracket, the majority are somewhere near the middle of the bracket. Cases of work-related stress resulting in a permanent or long-standing disability preventing a return to comparable employment would appear to come within this category.</P><P>£16,720 to £48,080</P><P>Moderate</P><P>While there may have been problems but there will have been marked improvement by trial and the prognosis will be good.</P><P>£5,130 to £16,720</P><P>Less Severe</P><P>£1,350 to £5,130</P>"
       }
     },
     "Other": {
       "popover": {
-        "title": "Other Psychiatric",
-        "body": "Other Psychiatric"
+        "title": "Psychiatric Harm",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College</strong></P><P>Severe</P><P>In these cases the injured person will have marked problems and the prognosis will be very poor.</P><P>£48,080 to £101,470</P><P>Moderately Severe</P><P>In these cases there will be significant problems but the prognosis will be much more optimistic than above. While there are awards which support both extremes of this bracket, the majority are somewhere near the middle of the bracket. Cases of work-related stress resulting in a permanent or long-standing disability preventing a return to comparable employment would appear to come within this category.</P><P>£16,720 to £48,080</P><P>Moderate</P><P>While there may have been problems but there will have been marked improvement by trial and the prognosis will be good.</P><P>£5,130 to £16,720</P><P>Less Severe</P><P>£1,350 to £5,130</P>"
       }
     }
   },
@@ -341,15 +401,26 @@
     "": {
       "popover": {
         "title": "Damage to Teeth",
-        "body": "Damage to Teeth"
+        "body":
+          "<P><strong>The following is an extract from the Judicial College</strong></P><P>The amounts awarded will vary according to the extent and/or the degree of discomfort of such treatment. Any difficulty with eating increases the award. These cases may overlap with fractures of the jaw, meriting awards in the brackets for such fractures. Awards may be greater where the damage results in or is caused by protracted dentistry.</P><P>Significant, chronic, tooth pain (such as from an untreated abscess) extending over a number of years together with significant general deterioration in the overall condition of teeth:</P><P>Up to £33,430</P><P>Loss of or serious damage to several front teeth.</P><P>£7,650 to £10,010</P><P>Loss of or serious damage to two front teeth.</P><P>£3,810 to £6,690</P><P>Loss of or serious damage to one front tooth.</P><P>£1,930 to £3,460</P><P>Loss of or damage to back teeth: per tooth:</P><P>£960 to £1,500</P>"
       }
     }
   },
-  "None of the above": {
+  "Brain injury": {
     "": {
       "popover": {
-        "title": "None of the above",
-        "body": "None of the above"
+        "title": "Brain Injury",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College</strong></P><P>Very Severe Brain Damage</P><P>In cases at the top of this bracket there may be some ability to follow basic commands, recovery of eye opening and return of sleep and waking patterns and postural reflex movement. There will be little, if any, evidence of meaningful response to environment, little or no language function, double incontinence and the need for full-time nursing care.</P><P>£247,280 to £354,260</P><P>Moderately Severe Brain Damage</P><P>The injured person will be very seriously disabled. There will be substantial dependence on others and a need for constant professional and other care. Disabilities may be physical, for example, limb paralysis, or cognitive, with marked impairment of intellect and personality. Cases otherwise within the category above may fall into this bracket if life expectancy has been greatly reduced. Where there is a risk of associated future development of other severe medical problems such as blindness an award in excess of the bracket would be justified.</P><P>£192,090 to £247,280</P><P>Moderate Brain Damage</P><P>This category is distinguished from the bracket above by the fact that the degree of dependence is markedly lower.</P><P>Cases in which there is moderate to severe intellectual deficit, a personality change, an effect on sight, speech and senses with a significant risk of epilepsy and no prospect of employment.</P><P>£131,620 to £192,090</P><P>Cases in which there is a moderate to modest intellectual deficit, the ability to work is greatly reduced if not removed and there is some risk of epilepsy (unless a provisional damages order provides for this risk).</P><P>£79,530 to £131,620</P><P>Cases in which concentration and memory are affected, the ability to work is reduced, where there is a small risk of epilepsy and any dependence on others is very limited.</P><P>£37,760 to £79,530</P><P>Less Severe Brain Damage</P><P>In these cases the injured person will have made a good recovery and will be able to take part in normal social life and to return to work. There may not have been a restoration of all normal functions so there may still be persisting problems such as poor concentration and memory or disinhibition of mood, which may interfere with lifestyle, leisure activities and future work prospects. At the top of this bracket there may be a small risk of epilepsy.</P><P>£13,430 to £37,760</P><P>Minor Brain or Head Injury</P><P>In these cases brain damage, if any, will have been minimal.</P><P>£1,940 to £11,200</P>"
+      }
+    }
+  },
+  "Spinal chord injury": {
+    "": {
+      "popover": {
+        "title": "Spinal Chord Injury",
+        "body":
+          "<P><strong>The following is an extract from the Judicial College</strong></P><P>Tetraplegia (also known as Quadriplegia)</P><P>The typical case of tetraplegia attracting an award in the mid-​range of this bracket is appropriate for cases in which the injured person is not in physical pain, has full awareness of their disability, has an expectation of life of 25 years or more, has retained powers of speech, sight and hearing but needs help with bodily functions. At the top end of the bracket will be cases where physical pain is present or where there is a significant effect on senses or ability to communicate. Such cases often involve significant brain damage where degree of insight is a relevant factor. Lack of awareness/ significantly reduced life expectancy will justify a below average award. Other factors bearing on the award include age, the extent of any residual movement, the degree of independence or pain relief (if any) whether through the provision of aids/ equipment, treatment or otherwise, the presence of respiratory issues and depression.</P><P>£284,610 to £354,260</P><P>Paraplegia</P><P>The level of the award within the bracket will be affected by the following considerations:</P><P>- the presence and extent of pain;</P><P>- the degree of independence;</P><P>- depression;</P><P>- age and life expectancy;</P><P>- impact on sexual function.</P><P>The presence of increasing paralysis or the degree of risk that this will occur, for example, from syringomyelia, might take the case above this bracket, as may the presence of other significant injuries. The former might be the subject of a provisional damages order.</P><P>£192,090 to £249,270</P><P>Shorter durations</P><P>In cases where death occurs for unrelated reasons within a short period of the accident a lower sum will be awarded. However some ‘front-loading’ is appropriate. For a young adult claimant suffering paraplegia where death occurs within about 2 years an award of around £43,260 is appropriate.</P>"
       }
     }
   }

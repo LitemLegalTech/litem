@@ -32,8 +32,13 @@ const data = {
         nxtQ: 'duration'
       },
       {
-        id: 'tNone',
-        label: 'None of the above',
+        id: 'tBrain',
+        label: 'Brain injury',
+        nxtQ: 'duration'
+      },
+      {
+        id: 'tSpinalChord',
+        label: 'Spinal chord injury',
         nxtQ: 'duration'
       }
     ]
@@ -43,11 +48,6 @@ const data = {
     title: 'Where was the injury located?',
     type: 'Dropdown',
     answers: [
-      {
-        id: 'lSoftBrain',
-        label: 'Brain injury / concussion',
-        nxtQ: 'duration'
-      },
       {
         id: 'lSoftNeck',
         label: 'Neck',
@@ -69,19 +69,19 @@ const data = {
         nxtQ: 'duration'
       },
       {
-        id: 'lSoftLimb',
-        label: 'Arm, leg, hand or foot area',
-        nxtQ: 'lSoftLimbDets'
+        id: 'lSoftArm',
+        label: 'Arm or hand area',
+        nxtQ: 'lSoftArmDets'
       },
       {
-        id: 'softOrgans',
-        label: 'Internal Organs',
-        nxtQ: 'duration'
+        id: 'lSoftLeg',
+        label: 'Leg or foot area',
+        nxtQ: 'lSoftLegDets'
       }
     ]
   },
-  lSoftLimbDets: {
-    id: 'lSoftLimbDets',
+  lSoftArmDets: {
+    id: 'lSoftArmDets',
     title: 'Where was the injury located?',
     type: 'Dropdown',
     answers: [
@@ -99,7 +99,14 @@ const data = {
         id: 'lSoftElbow',
         label: 'Elbow',
         nxtQ: 'duration'
-      },
+      }
+    ]
+  },
+  lSoftLegDets: {
+    id: 'lSoftLegDets',
+    title: 'Where was the injury located?',
+    type: 'Dropdown',
+    answers: [
       {
         id: 'lSoftLeg',
         label: 'Leg',
@@ -143,18 +150,13 @@ const data = {
         nxtQ: 'duration'
       },
       {
-        id: 'lFractureNeck',
-        label: 'Neck',
-        nxtQ: 'duration'
-      },
-      {
         id: 'lFractureHumerus',
         label: 'Humerus',
         nxtQ: 'duration'
       },
       {
-        id: 'lFractureSpine',
-        label: 'Spine',
+        id: 'lFractureRib',
+        label: 'Rib',
         nxtQ: 'duration'
       },
       {
@@ -163,19 +165,19 @@ const data = {
         nxtQ: 'duration'
       },
       {
-        id: 'lFractureLimb',
-        label: 'Arm, leg, hand or foot area',
-        nxtQ: 'lFractureLimbDets'
+        id: 'lFractureArm',
+        label: 'Arm / hand',
+        nxtQ: 'lFractureArmDets'
       },
       {
-        id: 'lNone',
-        label: 'None of the above',
-        nxtQ: 'duration'
+        id: 'lFractureLeg',
+        label: 'Leg / foot',
+        nxtQ: 'lFractureLegDets'
       }
     ]
   },
-  lFractureLimbDets: {
-    id: 'lFractureLimbDets',
+  lFractureArmDets: {
+    id: 'lFractureArmDets',
     title: 'Where was the injury located?',
     type: 'Dropdown',
     answers: [
@@ -203,7 +205,14 @@ const data = {
         id: 'lFractureThumb',
         label: 'Thumb',
         nxtQ: 'duration'
-      },
+      }
+    ]
+  },
+  lFractureLegDets: {
+    id: 'lFractureLegDets',
+    title: 'Where was the injury located?',
+    type: 'Dropdown',
+    answers: [
       {
         id: 'lFractureThigh',
         label: 'Thigh',
@@ -232,13 +241,13 @@ const data = {
     type: 'Dropdown',
     answers: [
       {
-        id: 'lBurnFace',
-        label: 'Face',
+        id: 'lBurnFacial',
+        label: 'Facial',
         nxtQ: 'duration'
       },
       {
-        id: 'lBurnOther',
-        label: 'Other',
+        id: 'lBurnNotFace',
+        label: 'Non-facial',
         nxtQ: 'duration'
       }
     ]
@@ -341,7 +350,7 @@ const data = {
   },
   financial: {
     id: 'financial',
-    title: 'Please detail your finacial losses',
+    title: 'Please detail your financial losses',
     type: 'FinancialInputs',
     answers: [
       {
