@@ -2,6 +2,7 @@ import React from 'react';
 //import { Button } from 'styled-button-component';
 import { CustomButton } from './customized-components';
 import FinancialInput from './../../components/styled-components/financial-input';
+import Popover from './popover';
 
 class FinancialInputs extends React.Component {
   state = {};
@@ -28,7 +29,10 @@ class FinancialInputs extends React.Component {
       <form onSubmit={e => this.handleSubmit(e)}>
         {this.props.q.answers.map((item, index) => (
           <React.Fragment key={index}>
-            <FinancialInput.Label htmlFor={item.qId}>{item.title}</FinancialInput.Label>
+            <FinancialInput.Label htmlFor={item.qId}>
+              {item.title}
+              {/*item.popover && <Popover questionMark title={item.popover.title} body={item.popover.body} />*/}
+            </FinancialInput.Label>
             <FinancialInput.Input
               type="number"
               id={item.id}

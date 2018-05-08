@@ -16,7 +16,7 @@ class Valuation extends React.Component {
       fTravel,
       fTreatment,
       fEarnings,
-      fMedication,
+      fPropertyDamage,
       fRepairs,
       fOther
     } = this.props.RootStore.ValuationStore.valuationObj.financialDetails;
@@ -30,7 +30,7 @@ class Valuation extends React.Component {
     );
     console.log(totalFinancialLosses);*/
 
-    const totalFinancialLosses = fTravel + fTreatment + fEarnings + fMedication + fRepairs + fOther;
+    const totalFinancialLosses = fTravel + fTreatment + fEarnings + fPropertyDamage + fRepairs + fOther;
 
     return (
       <React.Fragment>
@@ -39,7 +39,9 @@ class Valuation extends React.Component {
           <strong>SUMMARY</strong>
           <br />
           The overall value of your claim is determined by the value of your injury plus your financial losses. The
-          figures shown are to give you a guide as to what your case might be worth from the information given.
+          figures shown are to give you a guide as to what your case might be worth from the information given. In
+          particular, please note that this list of financial losses is not complete and you may have other losses not
+          mentioned.
         </P>
         <P>
           <strong>VALUE OF INJURY</strong>
@@ -155,13 +157,13 @@ class Valuation extends React.Component {
           <React.Fragment>
             <P>
               <strong>FINANCIAL LOSSES</strong>
-              <br />You indicated that you have the following financial losses:
+              <br />You indicated that you've suffered the following financial losses:
             </P>
             <List.UnorderedList>
               {fTravel > 0 && <List.Item>Travel - £{fTravel}</List.Item>}
               {fTreatment > 0 && <List.Item>Treatment - £{fTreatment}</List.Item>}
               {fEarnings > 0 && <List.Item>Lost earnings - £{fEarnings}</List.Item>}
-              {fMedication > 0 && <List.Item>Medical expenses - £{fMedication}</List.Item>}
+              {fPropertyDamage > 0 && <List.Item>Property damage - £{fPropertyDamage}</List.Item>}
               {fRepairs > 0 && <List.Item>Damage to property - £{fRepairs}</List.Item>}
               {fOther > 0 && <List.Item>Other - £{fOther}</List.Item>}
             </List.UnorderedList>

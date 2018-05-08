@@ -360,7 +360,7 @@ const data = {
       },
       {
         id: 'fTreatment',
-        title: 'Treatment costs',
+        title: 'Treatment / medication',
         nxtQ: 'valuation'
       },
       {
@@ -369,13 +369,22 @@ const data = {
         nxtQ: 'valuation'
       },
       {
-        id: 'fMedication',
-        title: 'Medication',
+        id: 'fPropertyDamage',
+        title: 'Property damage',
         nxtQ: 'valuation'
       },
       {
         id: 'fRepairs',
         title: 'Bicycle repairs',
+        nxtQ: 'valuation'
+      },
+      {
+        id: 'fCareAssitance',
+        title: 'Care and assistance',
+        popover: {
+          title: 'Care and Assistance',
+          body: 'Care and Assistance'
+        },
         nxtQ: 'valuation'
       },
       {
