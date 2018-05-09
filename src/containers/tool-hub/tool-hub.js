@@ -61,25 +61,24 @@ class ToolHub extends Component {
             >
               our guides
             </Link>{' '}
-            first. This includes a practical example of how someone would settle their case using Litem. If you are
-            ready to get started please select one of our tools:
+            first. This includes a practical example of how someone would settle their case using Litem.
+          </P>
+          <P>
+            If you are ready to see if you have a good case please click the button below. This will also create a
+            letter to notify the defendant of your case.
           </P>
           <BtnGroup>
-            <Btn
-              b="20px"
-              onClick={e => handleNavClick(e, this.props.history)}
-              id="tool-hub triage"
-              name="pre-triage-tool"
-            >
-              Do I have a case?
+            <Btn onClick={e => handleNavClick(e, this.props.history)} id="tool-hub triage" name="pre-triage-tool">
+              Case Evaluation and Letter Tool
             </Btn>
+            <P>Alternatively, if you are ready to value your case please click the button below.</P>
             <Btn
               b="20px"
               onClick={e => handleNavClick(e, this.props.history)}
               id="tool-hub valuer"
               name="pre-valuer-tool"
             >
-              What is my case worth?
+              Valuation Tool
             </Btn>
             {/*<Btn b="20px" onClick={e => handleNavClick(e, this.props.history)} id="tool-hub guides" name="guides">
               Or have a look through our guides?

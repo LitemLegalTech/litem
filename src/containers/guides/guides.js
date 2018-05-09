@@ -1,12 +1,14 @@
 import React from 'react';
 import { observer, inject } from 'mobx-react';
-import { pageView } from './../../services/ga-helpers';
+import { pageView, handleNavClick } from './../../services/ga-helpers';
+
 import Container from './../../components/styled-components/container';
 import Header from './../../components/styled-components/header';
 import Title from './../../components/styled-components/title';
 import Accordion from './../../components/accordion/accordion';
 import P from './../../components/styled-components/p';
 import List from './../../components/styled-components/list';
+import Link from './../../components/styled-components/link';
 
 const guide0 = {
   title: 'How does Litem work - a practical example',
@@ -313,12 +315,19 @@ class Guides extends React.Component {
   render() {
     return (
       <Container>
-        <Title center t="50px">
+        <Title center t="30px">
           Guides
         </Title>
-        <Header center b="20px">
-          Here are our guides to help you settle your case. Please let us know if you think we have missed something.
+        <Header center>Here are our guides to help you settle your case.</Header>
+        <Header center t="5px" b="30px">
+          Please click{' '}
+          <Link id="tool-hub guides" name="tool-hub" onClick={e => handleNavClick(e, this.props.history)}>
+            here
+          </Link>{' '}
+          when you are ready to use our tools to assess and resolve your case.
         </Header>
+
+        <Accordion id="guide11" content={guide11} />
         <Accordion id="guide0" content={guide0} />
         <Accordion id="guide1" content={guide1} />
         <Accordion id="guide2" content={guide2} />
@@ -330,7 +339,6 @@ class Guides extends React.Component {
         <Accordion id="guide8" content={guide8} />
         <Accordion id="guide9" content={guide9} />
         <Accordion id="guide10" content={guide10} />
-        <Accordion id="guide11" content={guide11} />
       </Container>
     );
   }

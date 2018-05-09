@@ -151,7 +151,7 @@ const Menu = styled.nav`
 class NavBar extends Component {
   state = {
     menuOpen: false,
-    showHidden: true
+    showHidden: false
   };
 
   onMenuButtonClick = () => {
@@ -177,8 +177,8 @@ class NavBar extends Component {
           <Link to="/" id="menu home" onClick={e => clicked(e.target.id)}>
             Home
           </Link>
-          <Link to="/tool-hub" id="menu triage" onClick={e => clicked(e.target.id)}>
-            Do I have a good case?
+          {/*<Link to="/tool-hub" id="menu triage" onClick={e => clicked(e.target.id)}>
+            Case Evaluation and Letter Tool
           </Link>
           <Link
             to="/pre-valuer-tool"
@@ -186,7 +186,15 @@ class NavBar extends Component {
             style={{ textDecoration: 'none' }}
             onClick={e => clicked(e.target.id)}
           >
-            How much is my case worth?
+            Valuation Tool
+    </Link>*/}
+          <Link
+            to="/tool-hub"
+            id="menu tool-hub"
+            style={{ textDecoration: 'none' }}
+            onClick={e => clicked(e.target.id)}
+          >
+            Our Tools
           </Link>
           <Link to="/guides" id="menu guides" onClick={e => clicked(e.target.id)}>
             Legal Guides

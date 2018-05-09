@@ -411,8 +411,12 @@ const Advice = inject('RootStore')(
     return (
       <Container style={{ backgroundColor: 'white' }} b="100px">
         <Header center t="40px">
-          Some feedback about your case. Press next to write to the defendant.
+          Some feedback about your case.
         </Header>
+        <Header center t="30px" b="30px">
+          Press 'Next' to write to the defendant.
+        </Header>
+
         <Accordion content={generalPoints} />
         <Accordion content={circumstancesOfIncident} />
         <Accordion content={valueOfCase} />

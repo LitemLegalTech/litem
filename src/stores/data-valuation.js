@@ -379,25 +379,11 @@ const data = {
         nxtQ: 'valuation'
       },
       {
-        id: 'fCareAssitance',
-        title: 'Care and assistance',
-        popover: {
-          title: 'Care and Assistance',
-          body: 'Care and Assistance'
-        },
-        nxtQ: 'valuation'
-      },
-      {
         id: 'fOther',
         title: 'Other',
         nxtQ: 'valuation'
       }
     ]
-  },
-  contactMe: {
-    id: 'contactMe',
-    title: '',
-    type: 'ContactForm'
   },
   valuation: {
     id: 'valuation',

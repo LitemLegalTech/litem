@@ -6,6 +6,8 @@ import styled from 'styled-components';
 const Header = styled.h3`
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
   text-align: ${props => (props.center ? 'center' : props.justify ? 'justify' : 'left')};
   padding-top: ${props => (props.t ? props.t : '0')};
   padding-bottom: ${props => (props.b ? props.b : '0')};

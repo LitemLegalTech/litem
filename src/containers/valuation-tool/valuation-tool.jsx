@@ -5,12 +5,12 @@ import { pageView, handleNavClick } from './../../services/ga-helpers';
 import Container from './../../components/styled-components/container';
 import Header from './../../components/styled-components/header';
 import P from './../../components/styled-components/p';
+
 import Loader from './loader';
 import FinancialInputs from './financial-inputs.jsx';
 import DropdownWrapper from './dropdown-wrapper';
 import Valuation from './valuation';
 import Navigation from './navigation';
-import ContactForm from './contact-form';
 import Sidebar from './sidebar';
 import Popover from './popover';
 
@@ -18,7 +18,6 @@ const components = {
   Loader: Loader,
   Dropdown: DropdownWrapper,
   FinancialInputs: FinancialInputs,
-  ContactForm: ContactForm,
   Valuation: Valuation
 };
 
@@ -67,6 +66,8 @@ class ValuationTool extends React.Component {
       this.props.RootStore.ValuationStore.currentQ === this.props.RootStore.ValuationStore.firstQ
     ) {
       this.setState({ navItems: [] });
+    } else if (this.props.RootStore.ValuationStore.currentQ === 'valuation') {
+      this.setState({ navItems: ['back', 'home'] });
     } else {
       //this.setState({ navItems: ['back', 'hist', 'clear'] });
       this.setState({ navItems: ['back'] });
@@ -97,6 +98,13 @@ class ValuationTool extends React.Component {
         localStorage.removeItem('valuationObj');
         this.props.RootStore.ValuationStore.setValuationObj();
         break;
+      case 'home':
+        console.log(navEvent);
+        const e = {
+          target: { name: '/', id: 'home on valuation advice' }
+        };
+        handleNavClick(e, this.props.history);
+        break;
       default:
         break;
     }
@@ -113,7 +121,7 @@ class ValuationTool extends React.Component {
         <Sidebar lastQs={lastQs} open={this.state.open} callback={() => this.setState({ open: !this.state.open })} />
         <Container>
           {q.title && (
-            <Header t="40px">
+            <Header t="40px" b="20px">
               {q.title}
               {q.popover && <Popover title={q.popover.title} body={q.popover.body} />}
             </Header>

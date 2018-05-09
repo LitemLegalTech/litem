@@ -26,7 +26,7 @@ class Routes extends Component {
     //ReactGA.initialize('UA-77504696-3');
     ReactGA.pageview(window.location.pathname + window.location.search);
   }
-
+  //<Route exact path="/valuer" component={TriageTool} />
   render() {
     return (
       <BrowserRouter>
@@ -43,8 +43,7 @@ class Routes extends Component {
               <Route exact path="/tool-hub" component={ToolHub} />
               <Route exact path="/contact" component={Contact} />
               <Route exact path="/triage-tool" component={TriageTool} />
-              <Route exact path="/valuer" component={TriageTool} />
-              <Route exact path="/valuerTEST" component={ValuationTool} />
+              <Route exact path="/valuer" component={ValuationTool} />
               <Route exact path="/pre-triage-tool" component={PreTriageTool} />
               <Route exact path="/pre-valuer-tool" component={PreValuerTool} />
               <Route exact path="/pre-letter-tool" component={PreLetterTool} />

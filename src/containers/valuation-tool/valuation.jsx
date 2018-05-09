@@ -44,6 +44,17 @@ class Valuation extends React.Component {
           mentioned.
         </P>
         <P>
+          If you have needed the help of a friend or family member to do daily household tasks (like cooking or
+          cleaning) or provide personal care (such as helping you wash or dress) their time can be claimed back at an
+          hourly rate of around £6.93 per hour.
+        </P>
+        <P>
+          If your employer has paid you sick pay or your insurer has paid for your vehicle damage, or a medical insurer
+          has paid for treatment, you may have a duty to recover their losses from the defendants as well as your own.
+          This is called a 'subrogated claim' and you should write to your employer / insurer to check if you have to
+          recover the money they've spent.
+        </P>
+        <P>
           <strong>VALUE OF INJURY</strong>
           <br />
           {injuries.length > 1 ? 'You suffered the following injuries:' : 'You suffered the following injury:'}
