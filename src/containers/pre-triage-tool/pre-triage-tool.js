@@ -17,6 +17,9 @@ class PreTriageTool extends React.Component {
           Do I have a good case?
         </Title>
         <P justify>We're going to ask you around 10 easy questions to find out whether you've got a good case.</P>
+        <P justify>
+          Once we have advised you on the case, we will then help you create a letter to send to the defendant.
+        </P>
         <P justify b="50px">
           Don't worry - you don't need to sign-up to get our advice and we don't take any personal details.
         </P>

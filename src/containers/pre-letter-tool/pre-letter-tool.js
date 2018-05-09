@@ -13,13 +13,15 @@ class PreTool extends React.Component {
   render() {
     return (
       <Container>
-        <Title t="50px" center>
+        <Title t="30px" center>
           Write to the defendant
         </Title>
-        <P>We're going to ask you around 5 more questions to generate a letter to notify the defendants.</P>
-        <P>It will look a little like this:</P>
+        <P>
+          We're going to ask you around 5 more questions to generate a letter to notify the defendants.
+          <br />
+          <br />It will look a little like this:
+        </P>
         <Lightbox />
-        <br />
         <P b="90px">
           If you have the defendant's registration you can find out if they are insured and get the details to notify
           the insurers directly. You need to use the Motor Insurer's Database{' '}

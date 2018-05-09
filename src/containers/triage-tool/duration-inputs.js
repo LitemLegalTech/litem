@@ -19,7 +19,7 @@ class Duration extends React.Component {
     const title = { __html: DOMPurify.sanitize(this.props.q.title) };
     return (
       <Container>
-        <Header center t="50px" dangerouslySetInnerHTML={title} />
+        <Header center t="30px" dangerouslySetInnerHTML={title} />
       </Container>
     );
   }

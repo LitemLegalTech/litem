@@ -5,7 +5,7 @@ export const Input = styled.input`
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid ${props => props.theme.colors.color4};
+  border: 1px solid ${props => props.theme.colors.color3};
   @media (max-width: 599px) {
     width: 250px;
     height: 50px;

@@ -162,15 +162,9 @@ class Section1 extends Component {
     });
 
   render() {
-    console.log(this.props.RootStore.SessionStore.userObj.allQs);
-    console.log(this.props.RootStore.SessionStore.currentQId);
     this.qs = this.props.RootStore.SessionStore.userObj.allQs;
     this.qId = this.props.RootStore.SessionStore.currentQId;
     const qType = this.qs[this.qId].type;
-    /*const title =
-      this.qs[this.qId].type === 'letter'
-        ? { __html: DOMPurify.sanitize('x') }
-        : { __html: DOMPurify.sanitize(this.qs[this.qId].title) };*/
     switch (qType) {
       case 'text':
         this.input = (
@@ -293,134 +287,86 @@ class Section1 extends Component {
           />
         );
         break;
-      /*case 'valuation':
-        this.input = (
-          <Valuation
-            history={this.props.history}
-            allQs={this.qs}
-            q={this.qs[this.qId]}
-            injuries={this.props.RootStore.SessionStore.userObj.injuries}
-          />
-        );
-        break;*/
       default:
         break;
     }
     return (
       <React.Fragment>
-        {/*<div className="section1">
-        <p onClick={() => this.setState({ test: !this.test })}>test</p>*/}
-        {/*this.state.test ? (
-          <Test />
-        ): this.qs[this.qId].type === 'preletter' ? (
-          <PreLetter
-            allQs={this.props.RootStore.SessionStore.userObj.allQs}
-            q={this.qs[this.qId]}
-            history={this.props.history}
-            setSection={x => this.props.RootStore.UIStore.setCurrentSection(x)}
-          />
-        ) :*/
-        this.qs[this.qId].qId === 'val0' ? (
-          <Container dark>
-            <Title dark>Valuation Tool</Title>
-            <Header dark>Building the best personal injury valuation tool on the internet takes time!</Header>
-            <Header dark>
-              Check back with us in {moment('20180514', 'YYYYMMDD').fromNow()} to get your valuation!
-            </Header>
-          </Container>
-        ) : (
-          <React.Fragment>
-            <form onSubmit={this.handleSubmit}>
-              {this.input}
-              {this.qs[this.qId].qId !== 'val0' ? (
-                <BtnBottom
-                  left
-                  type="button"
-                  onClick={() => {
-                    this.handleBack();
-                    clicked(`triage-tool back on ${this.qId}`);
-                  }}
-                  disabled={this.qs[this.qId].qId === 'moreThan3Years'}
-                >
-                  Back
-                </BtnBottom>
-              ) : (
-                <BtnBottom
-                  left
-                  type="button"
-                  onClick={() => {
-                    this.props.history.push(`triage-tool`);
-                    this.props.RootStore.UIStore.setCurrentSection('triageTool');
-                  }}
-                  name="triageTool"
-                >
-                  Go to Case Tool
-                </BtnBottom>
-              )}
-              {this.qs[this.qId].type === 'weak' ? (
-                <BtnBottom
-                  right
-                  onClick={() => {
-                    this.props.history.push('/');
-                    clicked('triage-tool home letter');
-                  }}
-                >
-                  home
-                </BtnBottom>
-              ) : !this.state.editedLetter ? (
-                <BtnBottom
-                  right
-                  type="submit"
-                  className={this.qs[this.qId].type === 'weak' && 'disabled'}
-                  onClick={() => clicked(`triage-tool next on ${this.qId}`)}
-                  disabled={this.qs[this.qId].type === 'weak'}
-                >
-                  {this.qs[this.qId].type === 'letter' ? 'finalise letter' : 'Next'}
-                </BtnBottom>
-              ) : this.qs[this.qId].qId !== 'postLetter' ? (
-                <React.Fragment>
-                  <BtnBottomFinalised
-                    center
-                    data-clipboard-target="#completedLetter"
-                    className="copy"
-                    type="button"
-                    onClick={() => {
-                      setTimeout(() => {
-                        this.props.RootStore.SessionStore.handleNext('PostTriageTool', 'postLetter');
-                      }, 2000);
-                      clicked('triage-tool copy letter');
-                    }}
-                  >
-                    copy
-                  </BtnBottomFinalised>
-                  <BtnBottomFinalised
-                    right
-                    type="button"
-                    onClick={() => {
-                      window.print();
-                      setTimeout(() => {
-                        this.props.RootStore.SessionStore.handleNext('PostTriageTool', 'postLetter');
-                      }, 2000);
-                      clicked('triage-tool print letter');
-                    }}
-                  >
-                    print
-                  </BtnBottomFinalised>
-                </React.Fragment>
-              ) : (
-                <BtnBottom
-                  right
-                  onClick={() => {
-                    this.props.history.push('/');
-                    clicked('triage-tool home letter');
-                  }}
-                >
-                  home
-                </BtnBottom>
-              )}
-            </form>
-          </React.Fragment>
-        )}
+        <form onSubmit={this.handleSubmit}>
+          {this.input}
+          <BtnBottom
+            left
+            type="button"
+            onClick={() => {
+              this.handleBack();
+              clicked(`triage-tool back on ${this.qId}`);
+            }}
+            disabled={this.qs[this.qId].qId === 'moreThan3Years'}
+          >
+            Back
+          </BtnBottom>
+          {this.qs[this.qId].type === 'weak' ? (
+            <BtnBottom
+              right
+              onClick={() => {
+                this.props.history.push('/');
+                clicked('triage-tool home letter');
+              }}
+            >
+              home
+            </BtnBottom>
+          ) : !this.state.editedLetter ? (
+            <BtnBottom
+              right
+              type="submit"
+              className={this.qs[this.qId].type === 'weak' && 'disabled'}
+              onClick={() => clicked(`triage-tool next on ${this.qId}`)}
+              disabled={this.qs[this.qId].type === 'weak'}
+            >
+              {this.qs[this.qId].type === 'letter' ? 'finalise letter' : 'Next'}
+            </BtnBottom>
+          ) : this.qs[this.qId].qId !== 'postLetter' ? (
+            <React.Fragment>
+              <BtnBottomFinalised
+                center
+                data-clipboard-target="#completedLetter"
+                className="copy"
+                type="button"
+                onClick={() => {
+                  setTimeout(() => {
+                    this.props.RootStore.SessionStore.handleNext('PostTriageTool', 'postLetter');
+                  }, 2000);
+                  clicked('triage-tool copy letter');
+                }}
+              >
+                copy
+              </BtnBottomFinalised>
+              <BtnBottomFinalised
+                right
+                type="button"
+                onClick={() => {
+                  window.print();
+                  setTimeout(() => {
+                    this.props.RootStore.SessionStore.handleNext('PostTriageTool', 'postLetter');
+                  }, 2000);
+                  clicked('triage-tool print letter');
+                }}
+              >
+                print
+              </BtnBottomFinalised>
+            </React.Fragment>
+          ) : (
+            <BtnBottom
+              right
+              onClick={() => {
+                this.props.history.push('/');
+                clicked('triage-tool home letter');
+              }}
+            >
+              home
+            </BtnBottom>
+          )}
+        </form>
       </React.Fragment>
     );
   }

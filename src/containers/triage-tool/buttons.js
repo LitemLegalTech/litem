@@ -12,7 +12,7 @@ const Buttons = inject('RootStore')(
     const title = { __html: DOMPurify.sanitize(props.q.title) };
     return (
       <BtnGroup>
-        <Header center t="40px" dangerouslySetInnerHTML={title} />
+        <Header center t="30px" b="30px" dangerouslySetInnerHTML={title} />
         {props.q.btnvalues.map((item, i) => {
           return (
             <Btn
