@@ -4,7 +4,7 @@ const arrow1 = `
   margin-left: auto;
   margin-right: auto;
   margin-top: auto;
-  margin-bottom: 90px;
+  margin-bottom: 100px;
   height: 25px;
   width: 25px;
 	border: 1px solid #3cc;
