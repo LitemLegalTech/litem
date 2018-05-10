@@ -19,7 +19,7 @@ const Header = styled.h3`
   color: ${props => (props.dark ? 'white' : props.theme.colors.color3)};
   @media (max-width: 599px) {
     font-size: 1.4rem;
-    max-width: 95%;
+    max-width: 90%;
   }
   @media (min-width: 600px) {
     font-size: 1.9rem;

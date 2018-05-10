@@ -47,7 +47,6 @@ class Home extends Component {
           </Header>
           <BtnGetStarted
             t="20px"
-            b="30px"
             onClick={e => handleNavClick(e, this.props.history)}
             id="get started home1"
             name="tool-hub"

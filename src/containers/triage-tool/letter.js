@@ -172,15 +172,19 @@ class Letter extends Component {
             <P>{this.props.RootStore.SessionStore.userObj.editedLetter.intro}</P>
           ) : (
             <React.Fragment>
+              <P>
+                <ins>Introduction</ins>
+              </P>
               <Textarea
                 style={{
-                  width: '90%',
+                  width: '95vw',
                   fontSize: '1.2rem',
                   maxWidth: '550px',
                   display: 'flex',
                   flexDirection: 'column',
                   marginLeft: 'auto',
                   marginRight: 'auto',
+                  marginTop: '10px',
                   padding: '10px'
                 }}
                 value={this.state.intro}

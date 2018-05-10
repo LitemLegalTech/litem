@@ -1,31 +1,32 @@
 import styled from 'styled-components';
 
 const Input = styled.input`
-  border: 1px solid ${props => props.theme.colors.color4};
-  margin-bottom: 5px;
+  border: 1px solid ${props => props.theme.colors.color3};
+  padding: 0 5px 0 5px;
+  margin: 5px;
   @media (max-width: 599px) {
     width: 95%;
     height: 40px;
     font-size: 1.1rem;
   }
   @media (min-width: 600px) {
-    width: 350px;
+    width: 95%;
     height: 40px;
     font-size: 1.1rem;
   }
   @media (min-width: 900px) {
-    width: 350px;
-    height: 50px;
+    width: 95%;
+    height: 40px;
     font-size: 1.1rem;
   }
   @media (min-width: 1200px) {
-    width: 350px;
-    height: 50px;
+    width: 95%;
+    height: 40px;
     font-size: 1.1rem;
   }
   @media (min-width: 1800px) {
-    width: 350px;
-    height: 50px;
+    width: 95%;
+    height: 40px;
     font-size: 1.1rem;
   }
 `;

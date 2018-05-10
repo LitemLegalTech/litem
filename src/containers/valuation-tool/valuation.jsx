@@ -34,7 +34,7 @@ class Valuation extends React.Component {
 
     return (
       <React.Fragment>
-        <Header>Here is your valuation</Header>
+        <Header t="30px">Here is your valuation</Header>
         <P>
           <strong>SUMMARY</strong>
           <br />

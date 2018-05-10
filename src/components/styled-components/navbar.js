@@ -59,8 +59,8 @@ const MenuButton = styled.button`
     transition: opacity 0.15s, transform 0.15s;
   }
   @media (max-width: 599px) {
-    top: 2px;
-    right: 2px;
+    top: 0;
+    right: 0;
   }
   @media print {
     display: none;

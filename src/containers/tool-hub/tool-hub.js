@@ -30,7 +30,7 @@ class ToolHub extends Component {
 
   render() {
     return (
-      <Container t="40px">
+      <Container t="30px">
         <Title center>Welcome to Litem.</Title>
         <Header center>Before we get going...</Header>
         <P>
@@ -68,12 +68,17 @@ class ToolHub extends Component {
             letter to notify the defendant of your case.
           </P>
           <BtnGroup>
-            <Btn onClick={e => handleNavClick(e, this.props.history)} id="tool-hub triage" name="pre-triage-tool">
+            <Btn
+              t="20px"
+              onClick={e => handleNavClick(e, this.props.history)}
+              id="tool-hub triage"
+              name="pre-triage-tool"
+            >
               Case Evaluation and Letter Tool
             </Btn>
             <P>Alternatively, if you are ready to value your case please click the button below.</P>
             <Btn
-              b="20px"
+              t="20px"
               onClick={e => handleNavClick(e, this.props.history)}
               id="tool-hub valuer"
               name="pre-valuer-tool"

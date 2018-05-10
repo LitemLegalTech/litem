@@ -9,7 +9,7 @@ const Input = styled.input`
   margin-bottom: ${props => (props.b ? props.b : '0')};
   padding-left: ${props => (props.l ? props.l : '5px')};
   padding-right: ${props => (props.r ? props.r : '0')};
-  border: 1px solid ${props => props.theme.colors.color4};
+  border: 1px solid ${props => props.theme.colors.color3};
 
   @media (max-width: 599px) {
     width: 90%;
@@ -49,7 +49,7 @@ const TextArea = styled.textarea`
   padding-bottom: ${props => (props.l ? props.l : '5px')};
   padding-left: ${props => (props.l ? props.l : '5px')};
   padding-right: ${props => (props.r ? props.r : '5px')};
-  border: 1px solid ${props => props.theme.colors.color4};
+  border: 1px solid ${props => props.theme.colors.color3};
 
   @media (max-width: 599px) {
     width: 90%;

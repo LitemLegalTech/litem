@@ -25,11 +25,12 @@ class Dates extends React.Component {
     console.log(this.state);
     return (
       <React.Fragment>
-        <Header t="50px" dangerouslySetInnerHTML={title} />
+        <Header center t="30px" dangerouslySetInnerHTML={title} />
         <div
           style={{
             marginLeft: 'auto',
             marginRight: 'auto',
+            marginTop: '30px',
             width: '95%',
             maxWidth: '350px',
             textAlign: 'center',

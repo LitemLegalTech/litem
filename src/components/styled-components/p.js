@@ -8,9 +8,11 @@ const P = styled.p`
   padding-right: ${props => (props.r ? props.r : '0')};
   margin-left: auto;
   margin-right: auto;
+  margin-top: 1em;
+  margin-bottom: 0;
   text-align: ${props => (props.center ? 'center' : props.justify ? 'justify' : 'left')};
   color: ${props => (props.dark ? 'white' : props.theme.colors.color3)};
-  line-height: 1.3em;
+  line-height: 1.2em;
   @media (max-width: 599px) {
     width: 90%;
     font-size: 1rem;

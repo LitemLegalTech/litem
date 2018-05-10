@@ -27,7 +27,7 @@ class PreTool extends React.Component {
           This tool is not for valuing fatal cases or serious injuries. In these circumstances you should speak with a
           solicitor.
         </P>
-        <P b="50px">
+        <P b="30px">
           It is important that you are honest when you come to value your case. There can be severe penalties for
           dishonesty. See{' '}
           <Link

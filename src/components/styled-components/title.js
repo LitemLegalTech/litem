@@ -7,6 +7,8 @@ const Title = styled.h1`
   padding-right: ${props => (props.r ? props.r : '0')};
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
   color: ${props => (props.dark ? props.theme.colors.color2 : props.theme.colors.color3)};
   text-align: ${props => (props.center ? 'center' : 'inherit')};
   line-height: 1;
