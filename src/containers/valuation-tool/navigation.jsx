@@ -15,7 +15,8 @@ class Navigation extends React.Component {
             display: 'inline-flex',
             justifyContent: 'space-between',
             position: 'fixed',
-            bottom: '0'
+            bottom: '0',
+            backgroundColor: '#e9ecef'
           }}
         >
           {this.props.navItems.map((item, key) => (
