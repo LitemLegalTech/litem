@@ -4,7 +4,9 @@ import { CustomBottomButton } from './customized-components';
 
 class Navigation extends React.Component {
   state = {};
-
+  /*            alignItems: 'flex-end',
+            marginTop: 'auto',
+            marginBottom: '50px'*/
   render() {
     return (
       <React.Fragment>
@@ -12,9 +14,8 @@ class Navigation extends React.Component {
           style={{
             display: 'inline-flex',
             justifyContent: 'space-between',
-            alignItems: 'flex-end',
-            marginTop: 'auto',
-            marginBottom: '50px'
+            position: 'fixed',
+            bottom: '0'
           }}
         >
           {this.props.navItems.map((item, key) => (

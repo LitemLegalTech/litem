@@ -129,8 +129,8 @@ class ValuationTool extends React.Component {
           {q.body && q.body.map((item, key) => <P key={key}>{item}</P>)}
 
           <QuestionWrapper q={q} callback={answer => this.handleAnswer(answer)} />
-          <Navigation callback={this.handleNavigation} navItems={navItems} />
         </Container>
+        <Navigation callback={this.handleNavigation} navItems={navItems} />
       </React.Fragment>
     );
   }
