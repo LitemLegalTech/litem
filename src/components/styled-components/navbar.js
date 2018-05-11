@@ -16,6 +16,12 @@ const MenuButton = styled.button`
   margin-left: auto;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0);
+  @media (max-width: 599px) {
+    top: 0;
+    right: 0;
+    margin-top: 0;
+    margin-right: 0;
+  }
   &:focus {
     outline: none;
     background-color: rgba(0, 0, 0, 0);
@@ -58,41 +64,12 @@ const MenuButton = styled.button`
     transform: ${props => (props.active ? 'scaleX(0)' : 'scaleX(1)')};
     transition: opacity 0.15s, transform 0.15s;
   }
-  @media (max-width: 599px) {
-    top: 0;
-    right: 0;
-  }
+
   @media print {
     display: none;
   }
 `;
 
-/*const Menu = styled.nav`
-  position: absolute;
-  z-index: 99;
-  left: 0;
-  top: 0;
-  height: 100%;
-  transition: width 0.2s;
-  width: ${props => (props.menuOpen ? '100%' : '0')};
-  background-color: ${props => props.theme.colors.color3};
-  overflow: hidden;
-  & a {
-    transition: opacity 0.4s;
-    opacity: ${props => (props.menuOpen ? '1' : '0')};
-    width: 100%
-    text-decoration: none;
-    color: white;
-    font-size: 2em;
-    background-color: ${props => props.theme.colors.color3};
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    height: 10%;
-    padding-Left: 10%;
-    }
-  }
-`;*/
 const Menu = styled.nav`
   position: absolute;
   z-index: 99;
@@ -177,17 +154,6 @@ class NavBar extends Component {
           <Link to="/" id="menu home" onClick={e => clicked(e.target.id)}>
             Home
           </Link>
-          {/*<Link to="/tool-hub" id="menu triage" onClick={e => clicked(e.target.id)}>
-            Case Evaluation and Letter Tool
-          </Link>
-          <Link
-            to="/pre-valuer-tool"
-            id="menu valuer"
-            style={{ textDecoration: 'none' }}
-            onClick={e => clicked(e.target.id)}
-          >
-            Valuation Tool
-    </Link>*/}
           <Link
             to="/tool-hub"
             id="menu tool-hub"
@@ -203,20 +169,17 @@ class NavBar extends Component {
             Get in Touch
           </Link>
           {this.state.showHidden && (
-            <React.Fragment>
-              <Link to="/valuerTEST">valuerTEST</Link>
-              <Link
-                to="/"
-                id="menu start fresh"
-                onClick={e => {
-                  clicked(e.target.id);
-                  localStorage.clear();
-                  this.props.RootStore.SessionStore.setUserObj();
-                }}
-              >
-                Start Fresh
-              </Link>
-            </React.Fragment>
+            <Link
+              to="/"
+              id="menu start fresh"
+              onClick={e => {
+                clicked(e.target.id);
+                localStorage.clear();
+                this.props.RootStore.SessionStore.setUserObj();
+              }}
+            >
+              Start Fresh
+            </Link>
           )}
         </Menu>
       </React.Fragment>

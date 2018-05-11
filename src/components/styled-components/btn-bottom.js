@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-//  vertical-align: middle;
 const BtnBottom = styled.button`
   position: fixed;
   bottom: 0;

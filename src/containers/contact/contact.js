@@ -61,7 +61,9 @@ class Contact extends Component {
       <Container notFull={this.props.history.location.pathname === '/'}>
         {!this.state.sent ? (
           <React.Fragment>
-            <Title center>Get in Touch</Title>
+            <Title center t="10px">
+              Get in Touch
+            </Title>
             <Header justify>Feel free to drop us an email at info@litem.co.uk.</Header>
             <Header justify>Alternatively, please send us a message below.</Header>
             <form onSubmit={this.handleSubmit}>

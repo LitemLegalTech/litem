@@ -27,7 +27,7 @@ export const CustomDropdownButton = styled(Button)`
     box-shadow: none;
   }
 `;
-
+//min-height: calc(100% + 100px);
 export const CustomDropdownMenu = styled(DropdownMenu)`
   display: inline-block;
   z-index: auto;
@@ -73,6 +73,7 @@ export const CustomButton = styled(Button)`
 export const CustomBottomButton = styled(Button)`
   margin-left: 10px;
   margin-right: 10px;
+  z-index: 1;
   width: 60px;
   height: 60px;
   border-radius: 100%;

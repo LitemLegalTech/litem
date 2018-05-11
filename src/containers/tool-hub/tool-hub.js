@@ -79,6 +79,7 @@ class ToolHub extends Component {
             <P>Alternatively, if you are ready to value your case please click the button below.</P>
             <Btn
               t="20px"
+              b="50px"
               onClick={e => handleNavClick(e, this.props.history)}
               id="tool-hub valuer"
               name="pre-valuer-tool"
