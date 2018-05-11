@@ -34,6 +34,7 @@ export const CustomDropdownMenu = styled(DropdownMenu)`
   width: 92%;
   margin-left: 4%;
   border: none;
+  padding-bottom: 90px;
 `;
 
 export const CustomDropdownItem = styled(DropdownItem)`
