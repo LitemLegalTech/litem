@@ -119,7 +119,7 @@ class ValuationTool extends React.Component {
     return (
       <React.Fragment>
         <Sidebar lastQs={lastQs} open={this.state.open} callback={() => this.setState({ open: !this.state.open })} />
-        <Container t="40px">
+        <Container t="45px">
           {q.title && (
             <Header b="20px">
               {q.title}
