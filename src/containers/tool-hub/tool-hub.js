@@ -30,7 +30,7 @@ class ToolHub extends Component {
 
   render() {
     return (
-      <Container t="30px">
+      <Container t="40px">
         <Title center>Welcome to Litem.</Title>
         <Header center>Before we get going...</Header>
         <P>
@@ -86,18 +86,7 @@ class ToolHub extends Component {
             >
               Valuation Tool
             </Btn>
-            {/*<Btn b="20px" onClick={e => handleNavClick(e, this.props.history)} id="tool-hub guides" name="guides">
-              Or have a look through our guides?
-            </Btn>*/}
           </BtnGroup>
-          {/*<P>
-            If you decide that you would prefer to use a lawyer, feel free to contact us{' '}
-            <Link onClick={e => handleNavClick(e, this.props.history)} id="tool-hub contact" name="contact">
-              here
-            </Link>{' '}
-            or email us at info@litem.co.uk and we will send you some suggestions. We are not paid to recommend these
-            law firms and we will never pass your details on to anyone.
-          </P>*/}
         </div>
       </Container>
     );

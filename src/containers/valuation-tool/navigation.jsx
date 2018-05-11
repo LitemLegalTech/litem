@@ -12,8 +12,9 @@ class Navigation extends React.Component {
           style={{
             display: 'inline-flex',
             justifyContent: 'space-between',
+            alignItems: 'flex-end',
             marginTop: 'auto',
-            marginBottom: '10px'
+            marginBottom: '50px'
           }}
         >
           {this.props.navItems.map((item, key) => (
