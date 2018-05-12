@@ -34,7 +34,6 @@ export const CustomDropdownMenu = styled(DropdownMenu)`
   width: 92%;
   margin-left: 4%;
   border: none;
-  padding-bottom: 90px;
 `;
 
 export const CustomDropdownItem = styled(DropdownItem)`
@@ -44,10 +43,10 @@ export const CustomDropdownItem = styled(DropdownItem)`
   padding-left: 1rem;
   padding-right: 1rem;
   cursor: pointer;
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
 `;
+/*  &:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }*/
 
 export const CustomButton = styled(Button)`
   display: flex;
@@ -79,7 +78,7 @@ export const CustomBottomButton = styled(Button)`
   width: 60px;
   height: 60px;
   border-radius: 100%;
-  background-color: ${props => props.theme.colors.color2};
+  background-color: rgba(0, 0, 0, 0);
   border: none;
   &:focus {
     border: none;

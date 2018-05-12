@@ -1,12 +1,8 @@
 import React from 'react';
-//import { Button } from 'styled-button-component';
 import { CustomBottomButton } from './customized-components';
 
 class Navigation extends React.Component {
   state = {};
-  /*            alignItems: 'flex-end',
-            marginTop: 'auto',
-            marginBottom: '50px'*/
   render() {
     return (
       <React.Fragment>
