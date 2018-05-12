@@ -78,7 +78,7 @@ export const CustomBottomButton = styled(Button)`
   width: 60px;
   height: 60px;
   border-radius: 100%;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: ${props => props.theme.colors.color2};
   border: none;
   &:focus {
     border: none;

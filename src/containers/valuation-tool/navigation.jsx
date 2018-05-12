@@ -12,7 +12,7 @@ class Navigation extends React.Component {
             justifyContent: 'space-between',
             position: 'fixed',
             bottom: '0',
-            backgroundColor: '#e9ecef'
+            backgroundColor: 'rgba(0, 0, 0, 0)'
           }}
         >
           {this.props.navItems.map((item, key) => (
