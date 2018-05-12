@@ -22,10 +22,9 @@ class Dates extends React.Component {
   };
   render() {
     const title = { __html: DOMPurify.sanitize(this.props.q.title) };
-    console.log(this.state);
     return (
       <React.Fragment>
-        <Header center t="30px" dangerouslySetInnerHTML={title} />
+        <Header center t="45px" dangerouslySetInnerHTML={title} />
         <div
           style={{
             marginLeft: 'auto',

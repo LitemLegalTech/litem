@@ -29,7 +29,7 @@ class Dropdowns extends Component {
       });
     return (
       <React.Fragment>
-        <Header center t="40px" b="10px" dangerouslySetInnerHTML={title} />
+        <Header center t="45px" b="10px" dangerouslySetInnerHTML={title} />
         <DropdownGroup>
           <DropdownTitle onClick={this.onDropdownClick}>{this.state.selected}</DropdownTitle>
           <DropdownMenu dropdownOpen={this.state.dropdownOpen} onClick={this.onDropdownClick}>
