@@ -12,6 +12,7 @@ class Navigation extends React.Component {
             justifyContent: 'space-between',
             position: 'fixed',
             bottom: '0',
+            width: '100%',
             backgroundColor: 'rgba(0, 0, 0, 0)'
           }}
         >

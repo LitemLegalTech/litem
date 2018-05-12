@@ -73,7 +73,6 @@ export const CustomButton = styled(Button)`
 export const CustomBottomButton = styled(Button)`
   margin-left: 10px;
   margin-right: 10px;
-  align-self: flex-end;
   z-index: 1;
   width: 60px;
   height: 60px;
