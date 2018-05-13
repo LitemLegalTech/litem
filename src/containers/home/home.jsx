@@ -40,7 +40,7 @@ class Home extends Component {
   render() {
     return (
       <React.Fragment>
-        <Container>
+        <Container style={{ backgroundColor: 'red' }}>
           <LogoLanding alt="Litem Logo" src={LogoDark} />
           <Header center t="4.5vh" b="4.5vh">
             Helping injured cyclists with free legal tools and guides
