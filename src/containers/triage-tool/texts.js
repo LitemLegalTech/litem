@@ -8,7 +8,7 @@ const Texts = props => {
   const title = { __html: DOMPurify.sanitize(props.q.title) };
   return (
     <React.Fragment>
-      <Header center t="30px" b="30px" dangerouslySetInnerHTML={title} />
+      <Header center t="45px" b="30px" dangerouslySetInnerHTML={title} />
       <Input.Input type="text" value={props.value} onChange={e => props.callback(e.target.value, props.q.nxtQId)} />
     </React.Fragment>
   );
