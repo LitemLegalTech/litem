@@ -380,9 +380,9 @@ const Advice = inject('RootStore')(
             the type of injury, its severity and the length of time it lasts. In addition you are entitled to your
             financial losses as a result of the incident. For more details see our{' '}
             <Link
-              name="valuer"
+              name="pre-valuer-tool"
               onClick={() => {
-                props.history.push('valuer');
+                props.history.push('pre-valuer-tool');
                 props.setSection('valuer');
               }}
             >
