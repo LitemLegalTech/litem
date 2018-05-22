@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import { observer, inject } from 'mobx-react';
 import ReactGA from 'react-ga';
+import GDPR from '../components/gdpr/gdpr';
 
 import Navbar from './../components/styled-components/navbar';
 import Home from './../containers/home/home';
@@ -22,15 +23,29 @@ import ValuationTool from './../containers/valuation-tool/valuation-tool';
 @inject('RootStore')
 @observer
 class Routes extends Component {
+  componentWillMount() {
+    this.props.RootStore.UIStore.checkGDPR();
+  }
+
   componentDidMount() {
-    //ReactGA.initialize('UA-77504696-3');
     ReactGA.pageview(window.location.pathname + window.location.search);
   }
-  //<Route exact path="/valuer" component={TriageTool} />
+
   render() {
+    this.props.RootStore.UIStore.checkGDPR();
+    console.log('this.props.RootStore.UIStore.checkGDPR();');
     return (
       <BrowserRouter>
         <div className="app">
+          {this.props.RootStore.UIStore.showGDPR && (
+            <GDPR
+              privacyPolicyText="Cookie Policy"
+              privacyPolicyUrl="privacy-policy"
+              allowText="Accept"
+              denyText="Disable Cookies"
+              text="We love transparency and we only use depersonalised data for behavioural statistics to improve our service. If you don't trust us you can disable cookies at any time and Litem's functionalitry will not be effected."
+            />
+          )}
           <Route component={Navbar} />
           <div
             className={`noNavBarContainer ${this.props.RootStore.UIStore.navBarIsOpen ? 'show' : 'hide'}`}

@@ -15,7 +15,7 @@ class PostLetter extends React.Component {
   render() {
     return (
       <Container>
-        <Title center t="50px">
+        <Title center t="30px">
           Action Plan
         </Title>
         <P>

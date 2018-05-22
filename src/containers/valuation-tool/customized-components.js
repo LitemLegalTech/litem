@@ -70,6 +70,18 @@ export const CustomButton = styled(Button)`
   }
 `;
 
+export const CustomNavigationWrapper = styled.div`
+  display: inline-flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  @media (min-width: 900px) {
+    justify-content: space-around;
+  }
+`;
+
 export const CustomBottomButton = styled(Button)`
   margin-left: 10px;
   margin-right: 10px;

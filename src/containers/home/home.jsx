@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import * as Scroll from 'react-scroll';
+//import GDPR from '../../components/gdpr/gdpr';
 
 import BtnGetStarted from './../../components/styled-components/btn-get-started';
 import BtnScrollDown from './../../components/styled-components/btn-scroll-down';
@@ -31,6 +32,7 @@ import imgTick from './../../assets/IMAGES/img-tick.svg';
 class Home extends Component {
   componentWillMount() {
     this.props.RootStore.UIStore.handleFadeIn();
+    this.props.RootStore.UIStore.setHistory(this.props.history);
   }
 
   componentDidMount() {
@@ -175,9 +177,23 @@ class Home extends Component {
           <br />
           <Link id="privacy-policy" name="privacy-policy" onClick={e => handleNavClick(e, this.props.history)}>
             Privacy Policy
+            <br />
+          </Link>
+          <br />
+          <Link id="noat-cookie-consent__setup" onClick={() => this.props.RootStore.UIStore.setShowGDPR(true)}>
+            Cookie Settings
           </Link>
           <Footer.P dark>(C) 2018 Litem Ltd. All rights reserved</Footer.P>
         </footer>
+        {/*this.props.RootStore.UIStore.showGDPR && (
+          <GDPR
+            privacyPolicyText="Cookie Policy"
+            privacyPolicyUrl="privacy-policy"
+            allowText="Accept"
+            denyText="Disable Cookies"
+            text="We love transparency and we only use depersonalised data for behavioural statistics to improve our service. If you don't trust us you can disable cookies at any time and Litem's functionalitry will not be effected."
+          />
+        )*/}
       </React.Fragment>
     );
   }

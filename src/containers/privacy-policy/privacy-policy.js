@@ -205,8 +205,9 @@ const PrivacyPolicy = props => {
         For operation and maintenance purposes, this Website and any third-party services may collect files that record
         interaction with this Website (System logs) or use for this purpose other Personal Data (such as IP Address).
       </P>
+
+      <Header>Information not contained in this policy</Header>
       <P>
-        <Header>Information not contained in this policy</Header>
         More details concerning the collection or processing of Personal Data may be requested from the Data Controller
         at any time. Please see the contact information at the beginning of this document.
       </P>

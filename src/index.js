@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'mobx-react';
 import registerServiceWorker from './registerServiceWorker';
+//import '@nerdsofalltrad.es/gdpr-cookie-monster';
 
 import RootStore from './stores/root-store';
 import Routes from './routes/routes';

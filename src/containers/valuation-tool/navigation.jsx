@@ -1,27 +1,18 @@
 import React from 'react';
-import { CustomBottomButton } from './customized-components';
+import { CustomNavigationWrapper, CustomBottomButton } from './customized-components';
 
 class Navigation extends React.Component {
   state = {};
   render() {
     return (
       <React.Fragment>
-        <div
-          style={{
-            display: 'inline-flex',
-            justifyContent: 'space-between',
-            position: 'fixed',
-            bottom: '0',
-            width: '100%',
-            backgroundColor: 'rgba(0, 0, 0, 0)'
-          }}
-        >
+        <CustomNavigationWrapper>
           {this.props.navItems.map((item, key) => (
             <CustomBottomButton key={key} onClick={() => this.props.callback({ item })}>
               {item}
             </CustomBottomButton>
           ))}
-        </div>
+        </CustomNavigationWrapper>
       </React.Fragment>
     );
   }

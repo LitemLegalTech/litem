@@ -128,7 +128,7 @@ const Menu = styled.nav`
 class NavBar extends Component {
   state = {
     menuOpen: false,
-    showHidden: true
+    showHidden: false
   };
 
   onMenuButtonClick = () => {
