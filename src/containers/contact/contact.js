@@ -4,6 +4,7 @@ import { observer, inject } from 'mobx-react';
 import Container from './../../components/styled-components/container';
 import Title from './../../components/styled-components/title';
 import Header from './../../components/styled-components/header';
+import P from './../../components/styled-components/p';
 import Btn from './../../components/styled-components/btn';
 import BtnGroup from './../../components/styled-components/btn-group';
 
@@ -59,33 +60,21 @@ class Contact extends Component {
   render() {
     return (
       <Container notFull={this.props.history.location.pathname === '/'}>
-        <Title center t="30px" b="30px">
+        <Title center t="10px">
           Get in Touch
         </Title>
-        <Header>
-          Please do send an email to us at <strong>info@litem.co.uk</strong> if would have any questions or feedback. We
-          would love to hear from you!
-        </Header>
+        <Header justify>Feel free to drop us an email at info@litem.co.uk.</Header>
+        <Header justify>Alternatively, please send us a message below.</Header>
         <form name="contact" method="post">
-          <input type="hidden" name="form-name" value="contact" />
-          <p>
-            <label>
-              Your Name: <input type="text" name="name" />
-            </label>
-          </p>
-          <p>
-            <label>
-              Your Email: <input type="email" name="email" />
-            </label>
-          </p>
-          <p>
-            <label>
-              Message: <textarea name="message" />
-            </label>
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
+          <ContactForm.Input type="hidden" name="form-name" value="contact" />
+          <ContactForm.Input type="text" name="name" t="20px" placeholder="name" required />
+          <ContactForm.Input type="email" name="email" t="20px" placeholder="email" autoComplete="email" required />
+          <ContactForm.TextArea name="message" t="20px" b="20px" placeholder="message" rows="10" cols="100" required />
+          <BtnGroup>
+            <Btn t="50px" b="50px" type="submit">
+              Send
+            </Btn>
+          </BtnGroup>
         </form>
         {/*!this.state.sent ? (
           <React.Fragment>
