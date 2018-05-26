@@ -59,7 +59,35 @@ class Contact extends Component {
   render() {
     return (
       <Container notFull={this.props.history.location.pathname === '/'}>
-        {!this.state.sent ? (
+        <Title center t="30px" b="30px">
+          Get in Touch
+        </Title>
+        <Header>
+          Please do send an email to us at <strong>info@litem.co.uk</strong> if would have any questions or feedback. We
+          would love to hear from you!
+        </Header>
+        <form name="contact" method="post">
+          <input type="hidden" name="form-name" value="contact" />
+          <p>
+            <label>
+              Your Name: <input type="text" name="name" />
+            </label>
+          </p>
+          <p>
+            <label>
+              Your Email: <input type="email" name="email" />
+            </label>
+          </p>
+          <p>
+            <label>
+              Message: <textarea name="message" />
+            </label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
+        {/*!this.state.sent ? (
           <React.Fragment>
             <Title center t="10px">
               Get in Touch
@@ -103,7 +131,7 @@ class Contact extends Component {
           </React.Fragment>
         ) : (
           <Title>Message Sent!</Title>
-        )}
+        )*/}
       </Container>
     );
   }

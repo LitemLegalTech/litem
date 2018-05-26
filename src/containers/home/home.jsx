@@ -155,7 +155,7 @@ class Home extends Component {
             Start
           </BtnGetStarted>
         </Container>
-        <Contact id="home contact form" history={this.props.history} />
+        {/*<Contact id="home contact form" history={this.props.history} />*/}
         <footer
           style={{
             backgroundColor: '#42506b',
