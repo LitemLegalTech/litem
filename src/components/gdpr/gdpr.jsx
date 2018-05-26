@@ -54,7 +54,7 @@ export default class GDPR extends React.Component {
           <span className="noat-cookie-consent-banner__text" style={{ alignSelf: 'center' }}>
             {this.props.text
               ? this.props.text
-              : "We love transparency and we only use depersonalised data for behavioural statistics to improve our service. If you don't trust us you can disable cookies at any time and Litem's functionalitry will not be effected."}
+              : "We love transparency and we only use depersonalised data for behavioural statistics to improve our service. If you don't trust us you can disable cookies at any time and Litem's functionality will not be effected."}
           </span>
           <span
             className="noat-cookie-consent-banner__other-actions"
